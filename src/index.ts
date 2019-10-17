@@ -8,16 +8,31 @@ import * as assert from 'assert';
 export type ByteArray = number[];
 export type Transaction = { txID: string, signature?: string[] };
 
-export default class Tron { 
+export default class Tron {
 
   constructor(coinName: string) {
     // TODO: this will probably need to become more useful if we need to decode if based on network
   }
 
-  static parseTransaction(base64EncodedHex: string): ParsedTransaction | ParsedAccountUpdatePermission {
+  static decodeContract(base64EncodedHex: string): DecodedContract | ParsedAccountUpdatePermission {
+    const rawContract = this.getRawTransferContract(base64EncodedHex);
+    // there should not be multiple contracts in this data
+    assert(rawContract.contractList.length === 1);
+
+    // ensure the contract type is supported
+    switch  (rawContract.contractList[0].parameter.typeUrl) {
+      case 'type.googleapis.com/protocol.TransferContract':
+        return this.decodeTransferContract(rawContract.contractList[0].parameter.value);
+      case 'type.googleapis.com/protocol.AccountPermissionUpdateContract':
+        return this.decodeAccountPermissionUpdateContract(rawContract.contractList[0].parameter.value);
+      default:
+        throw new Error('Unsupported contract type');
+    }
+  }
+
+  static getRawTransferContract(base64EncodedHex: string): transferContractRaw {
     const bytes = Buffer.from(base64EncodedHex, 'hex');
     let raw;
-
     // we need to decode our raw_data_hex field first
     try {
       raw = tronproto.Transaction.raw.deserializeBinary(bytes).toObject();
@@ -25,23 +40,31 @@ export default class Tron {
       console.log('There was an error decoding the initial raw_data_hex from the serialized tx.');
       throw e;
     }
-    
-    // there should not be multiple contracts in this data
-    assert(raw.contractList.length === 1);
-
-    // ensure the contract type is supported
-    switch  (raw.contractList[0].parameter.typeUrl) {
-      case 'type.googleapis.com/protocol.TransferContract':
-        return this.decodeTransferContract(raw.contractList[0].parameter.value);
-      case 'type.googleapis.com/protocol.AccountPermissionUpdateContract':
-        return this.decodeAccountPermissionUpdateContract(raw.contractList[0].parameter.value);
-      default:
-        throw new Error('Unsupported contract type');    
-    }
+    return {
+      expiration: raw.expiration,
+      timestamp: raw.timestamp,
+      contractList: raw.contractList,
+    };
   }
 
-  static decodeTransferContract(base64: string): ParsedTransaction {
-    const contractBytes = Buffer.from(base64, 'base64');
+  /** A valid hex string must be a string made of numbers and characters and has an even length.*/
+  static safeTronHexString(str: string): Boolean {
+    // the second and third condition look unnecessary in Typescript, but since we are eventually running
+    // the javascript version of the library under the hood, they are included.
+    if (!str || typeof(str) !== 'string' || !str.match(/^(0x)?[0-9a-fA-F]*$/)) {
+      return false;
+    }
+    if ((str.length % 2) !== 0) {
+      return false;
+    }
+    return true;
+  }
+
+  /** Deserialize the portion of the txHex which corresponds with the details of the transfer
+   * @param transferHex is the value property of the "parameter" field of contractList[0]
+   * */
+  static decodeTransferContract(transferHex: string): DecodedContract {
+    const contractBytes = Buffer.from(transferHex, 'base64');
     let transferContract;
 
     try {
@@ -124,7 +147,7 @@ export default class Tron {
   }
 }
 
-export interface ParsedTransaction {
+export interface DecodedContract {
   // base58 encoded address
   toAddress: string;
   ownerAddress: string;
@@ -139,3 +162,20 @@ export interface Account {
   publicKey: string;
   privateKey: string;
 }
+
+export interface Parameter {
+  value: string;
+  typeUrl: string;
+}
+
+export interface Contract {
+  parameter: Parameter;
+  type: string;
+}
+
+export interface transferContractRaw {
+  expiration: number;
+  timestamp: number;
+  contractList: Array<Contract>;
+}
+
