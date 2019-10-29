@@ -8,7 +8,7 @@ To generate static code from the proto files, run:
 
 ```bash
 cd resources/trx/protobuf/
-node ../../../node_modules/protobufjs/cli/bin/pbjs -t static-module -w commonjs -o tron.js Discover.proto Contract.proto tron.proto
+node ../../../node_modules/protobufjs/cli/bin/pbjs -t static-module --keep-case -w commonjs -o tron.js Discover.proto Contract.proto tron.proto
 ```
 
 Then, to generate the respective TypeScript definitions:

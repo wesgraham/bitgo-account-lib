@@ -1,6 +1,7 @@
-import {BaseAddress, BaseKey, Destination} from "./coin/baseCoin/iface";
+import {BaseAddress, BaseKey, Destination, BaseSignature} from "./coin/baseCoin/iface";
 import { BaseCoin as CoinConfig } from "@bitgo/statics";
 import { TransactionType } from "./coin/baseCoin";
+import { Signature } from "./coin/trx/signature";
 
 /**
  * Specifies the members expected for a Transaction
@@ -9,11 +10,14 @@ export abstract class BaseTransaction {
   protected _id: string;  // The transaction id as seen in the blockchain
   protected _fromAddresses: BaseAddress[];
   protected _destination: Destination[];
+  protected _signatures: Signature[];
   protected _type: TransactionType;
   protected _validFrom: number;
   protected _validTo: number;
 
-  protected constructor(protected _coinConfig: Readonly<CoinConfig>) { }
+  protected constructor(protected _coinConfig: Readonly<CoinConfig>) { 
+    this._signatures = new Array<Signature>();
+  }
 
   get id() {
     return this._id;
@@ -37,6 +41,10 @@ export abstract class BaseTransaction {
 
   get validTo(): number {
     return this._validTo;
+  }
+
+  get signatures(): Signature[] {
+    return this._signatures;
   }
 
   /**

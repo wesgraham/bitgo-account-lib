@@ -617,11 +617,11 @@ export namespace protocol {
     /** Properties of an AccountCreateContract. */
     interface IAccountCreateContract {
 
-        /** AccountCreateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** AccountCreateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** AccountCreateContract accountAddress */
-        accountAddress?: (Uint8Array|null);
+        /** AccountCreateContract account_address */
+        account_address?: (Uint8Array|null);
 
         /** AccountCreateContract type */
         type?: (protocol.AccountType|null);
@@ -636,11 +636,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IAccountCreateContract);
 
-        /** AccountCreateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** AccountCreateContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** AccountCreateContract accountAddress. */
-        public accountAddress: Uint8Array;
+        /** AccountCreateContract account_address. */
+        public account_address: Uint8Array;
 
         /** AccountCreateContract type. */
         public type: protocol.AccountType;
@@ -719,11 +719,11 @@ export namespace protocol {
     /** Properties of an AccountUpdateContract. */
     interface IAccountUpdateContract {
 
-        /** AccountUpdateContract accountName */
-        accountName?: (Uint8Array|null);
+        /** AccountUpdateContract account_name */
+        account_name?: (Uint8Array|null);
 
-        /** AccountUpdateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** AccountUpdateContract owner_address */
+        owner_address?: (Uint8Array|null);
     }
 
     /** Represents an AccountUpdateContract. */
@@ -735,11 +735,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IAccountUpdateContract);
 
-        /** AccountUpdateContract accountName. */
-        public accountName: Uint8Array;
+        /** AccountUpdateContract account_name. */
+        public account_name: Uint8Array;
 
-        /** AccountUpdateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** AccountUpdateContract owner_address. */
+        public owner_address: Uint8Array;
 
         /**
          * Creates a new AccountUpdateContract instance using the specified properties.
@@ -815,11 +815,11 @@ export namespace protocol {
     /** Properties of a SetAccountIdContract. */
     interface ISetAccountIdContract {
 
-        /** SetAccountIdContract accountId */
-        accountId?: (Uint8Array|null);
+        /** SetAccountIdContract account_id */
+        account_id?: (Uint8Array|null);
 
-        /** SetAccountIdContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** SetAccountIdContract owner_address */
+        owner_address?: (Uint8Array|null);
     }
 
     /** Represents a SetAccountIdContract. */
@@ -831,11 +831,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ISetAccountIdContract);
 
-        /** SetAccountIdContract accountId. */
-        public accountId: Uint8Array;
+        /** SetAccountIdContract account_id. */
+        public account_id: Uint8Array;
 
-        /** SetAccountIdContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** SetAccountIdContract owner_address. */
+        public owner_address: Uint8Array;
 
         /**
          * Creates a new SetAccountIdContract instance using the specified properties.
@@ -911,11 +911,11 @@ export namespace protocol {
     /** Properties of a TransferContract. */
     interface ITransferContract {
 
-        /** TransferContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** TransferContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** TransferContract toAddress */
-        toAddress?: (Uint8Array|null);
+        /** TransferContract to_address */
+        to_address?: (Uint8Array|null);
 
         /** TransferContract amount */
         amount?: (number|Long|null);
@@ -930,11 +930,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ITransferContract);
 
-        /** TransferContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** TransferContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** TransferContract toAddress. */
-        public toAddress: Uint8Array;
+        /** TransferContract to_address. */
+        public to_address: Uint8Array;
 
         /** TransferContract amount. */
         public amount: (number|Long);
@@ -1013,14 +1013,14 @@ export namespace protocol {
     /** Properties of a TransferAssetContract. */
     interface ITransferAssetContract {
 
-        /** TransferAssetContract assetName */
-        assetName?: (Uint8Array|null);
+        /** TransferAssetContract asset_name */
+        asset_name?: (Uint8Array|null);
 
-        /** TransferAssetContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** TransferAssetContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** TransferAssetContract toAddress */
-        toAddress?: (Uint8Array|null);
+        /** TransferAssetContract to_address */
+        to_address?: (Uint8Array|null);
 
         /** TransferAssetContract amount */
         amount?: (number|Long|null);
@@ -1035,14 +1035,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ITransferAssetContract);
 
-        /** TransferAssetContract assetName. */
-        public assetName: Uint8Array;
+        /** TransferAssetContract asset_name. */
+        public asset_name: Uint8Array;
 
-        /** TransferAssetContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** TransferAssetContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** TransferAssetContract toAddress. */
-        public toAddress: Uint8Array;
+        /** TransferAssetContract to_address. */
+        public to_address: Uint8Array;
 
         /** TransferAssetContract amount. */
         public amount: (number|Long);
@@ -1121,11 +1121,11 @@ export namespace protocol {
     /** Properties of a VoteAssetContract. */
     interface IVoteAssetContract {
 
-        /** VoteAssetContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** VoteAssetContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** VoteAssetContract voteAddress */
-        voteAddress?: (Uint8Array[]|null);
+        /** VoteAssetContract vote_address */
+        vote_address?: (Uint8Array[]|null);
 
         /** VoteAssetContract support */
         support?: (boolean|null);
@@ -1143,11 +1143,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IVoteAssetContract);
 
-        /** VoteAssetContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** VoteAssetContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** VoteAssetContract voteAddress. */
-        public voteAddress: Uint8Array[];
+        /** VoteAssetContract vote_address. */
+        public vote_address: Uint8Array[];
 
         /** VoteAssetContract support. */
         public support: boolean;
@@ -1229,8 +1229,8 @@ export namespace protocol {
     /** Properties of a VoteWitnessContract. */
     interface IVoteWitnessContract {
 
-        /** VoteWitnessContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** VoteWitnessContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** VoteWitnessContract votes */
         votes?: (protocol.VoteWitnessContract.IVote[]|null);
@@ -1248,8 +1248,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IVoteWitnessContract);
 
-        /** VoteWitnessContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** VoteWitnessContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** VoteWitnessContract votes. */
         public votes: protocol.VoteWitnessContract.IVote[];
@@ -1333,11 +1333,11 @@ export namespace protocol {
         /** Properties of a Vote. */
         interface IVote {
 
-            /** Vote voteAddress */
-            voteAddress?: (Uint8Array|null);
+            /** Vote vote_address */
+            vote_address?: (Uint8Array|null);
 
-            /** Vote voteCount */
-            voteCount?: (number|Long|null);
+            /** Vote vote_count */
+            vote_count?: (number|Long|null);
         }
 
         /** Represents a Vote. */
@@ -1349,11 +1349,11 @@ export namespace protocol {
              */
             constructor(properties?: protocol.VoteWitnessContract.IVote);
 
-            /** Vote voteAddress. */
-            public voteAddress: Uint8Array;
+            /** Vote vote_address. */
+            public vote_address: Uint8Array;
 
-            /** Vote voteCount. */
-            public voteCount: (number|Long);
+            /** Vote vote_count. */
+            public vote_count: (number|Long);
 
             /**
              * Creates a new Vote instance using the specified properties.
@@ -1430,14 +1430,14 @@ export namespace protocol {
     /** Properties of an UpdateSettingContract. */
     interface IUpdateSettingContract {
 
-        /** UpdateSettingContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** UpdateSettingContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** UpdateSettingContract contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** UpdateSettingContract contract_address */
+        contract_address?: (Uint8Array|null);
 
-        /** UpdateSettingContract consumeUserResourcePercent */
-        consumeUserResourcePercent?: (number|Long|null);
+        /** UpdateSettingContract consume_user_resource_percent */
+        consume_user_resource_percent?: (number|Long|null);
     }
 
     /** Represents an UpdateSettingContract. */
@@ -1449,14 +1449,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IUpdateSettingContract);
 
-        /** UpdateSettingContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** UpdateSettingContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** UpdateSettingContract contractAddress. */
-        public contractAddress: Uint8Array;
+        /** UpdateSettingContract contract_address. */
+        public contract_address: Uint8Array;
 
-        /** UpdateSettingContract consumeUserResourcePercent. */
-        public consumeUserResourcePercent: (number|Long);
+        /** UpdateSettingContract consume_user_resource_percent. */
+        public consume_user_resource_percent: (number|Long);
 
         /**
          * Creates a new UpdateSettingContract instance using the specified properties.
@@ -1532,14 +1532,14 @@ export namespace protocol {
     /** Properties of an UpdateEnergyLimitContract. */
     interface IUpdateEnergyLimitContract {
 
-        /** UpdateEnergyLimitContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** UpdateEnergyLimitContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** UpdateEnergyLimitContract contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** UpdateEnergyLimitContract contract_address */
+        contract_address?: (Uint8Array|null);
 
-        /** UpdateEnergyLimitContract originEnergyLimit */
-        originEnergyLimit?: (number|Long|null);
+        /** UpdateEnergyLimitContract origin_energy_limit */
+        origin_energy_limit?: (number|Long|null);
     }
 
     /** Represents an UpdateEnergyLimitContract. */
@@ -1551,14 +1551,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IUpdateEnergyLimitContract);
 
-        /** UpdateEnergyLimitContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** UpdateEnergyLimitContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** UpdateEnergyLimitContract contractAddress. */
-        public contractAddress: Uint8Array;
+        /** UpdateEnergyLimitContract contract_address. */
+        public contract_address: Uint8Array;
 
-        /** UpdateEnergyLimitContract originEnergyLimit. */
-        public originEnergyLimit: (number|Long);
+        /** UpdateEnergyLimitContract origin_energy_limit. */
+        public origin_energy_limit: (number|Long);
 
         /**
          * Creates a new UpdateEnergyLimitContract instance using the specified properties.
@@ -1634,11 +1634,11 @@ export namespace protocol {
     /** Properties of a ClearABIContract. */
     interface IClearABIContract {
 
-        /** ClearABIContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ClearABIContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ClearABIContract contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** ClearABIContract contract_address */
+        contract_address?: (Uint8Array|null);
     }
 
     /** Represents a ClearABIContract. */
@@ -1650,11 +1650,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IClearABIContract);
 
-        /** ClearABIContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ClearABIContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ClearABIContract contractAddress. */
-        public contractAddress: Uint8Array;
+        /** ClearABIContract contract_address. */
+        public contract_address: Uint8Array;
 
         /**
          * Creates a new ClearABIContract instance using the specified properties.
@@ -1730,8 +1730,8 @@ export namespace protocol {
     /** Properties of a WitnessCreateContract. */
     interface IWitnessCreateContract {
 
-        /** WitnessCreateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** WitnessCreateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** WitnessCreateContract url */
         url?: (Uint8Array|null);
@@ -1746,8 +1746,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IWitnessCreateContract);
 
-        /** WitnessCreateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** WitnessCreateContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** WitnessCreateContract url. */
         public url: Uint8Array;
@@ -1826,11 +1826,11 @@ export namespace protocol {
     /** Properties of a WitnessUpdateContract. */
     interface IWitnessUpdateContract {
 
-        /** WitnessUpdateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** WitnessUpdateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** WitnessUpdateContract updateUrl */
-        updateUrl?: (Uint8Array|null);
+        /** WitnessUpdateContract update_url */
+        update_url?: (Uint8Array|null);
     }
 
     /** Represents a WitnessUpdateContract. */
@@ -1842,11 +1842,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IWitnessUpdateContract);
 
-        /** WitnessUpdateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** WitnessUpdateContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** WitnessUpdateContract updateUrl. */
-        public updateUrl: Uint8Array;
+        /** WitnessUpdateContract update_url. */
+        public update_url: Uint8Array;
 
         /**
          * Creates a new WitnessUpdateContract instance using the specified properties.
@@ -1925,8 +1925,8 @@ export namespace protocol {
         /** AssetIssueContract id */
         id?: (string|null);
 
-        /** AssetIssueContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** AssetIssueContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** AssetIssueContract name */
         name?: (Uint8Array|null);
@@ -1934,14 +1934,14 @@ export namespace protocol {
         /** AssetIssueContract abbr */
         abbr?: (Uint8Array|null);
 
-        /** AssetIssueContract totalSupply */
-        totalSupply?: (number|Long|null);
+        /** AssetIssueContract total_supply */
+        total_supply?: (number|Long|null);
 
-        /** AssetIssueContract frozenSupply */
-        frozenSupply?: (protocol.AssetIssueContract.IFrozenSupply[]|null);
+        /** AssetIssueContract frozen_supply */
+        frozen_supply?: (protocol.AssetIssueContract.IFrozenSupply[]|null);
 
-        /** AssetIssueContract trxNum */
-        trxNum?: (number|null);
+        /** AssetIssueContract trx_num */
+        trx_num?: (number|null);
 
         /** AssetIssueContract precision */
         precision?: (number|null);
@@ -1949,17 +1949,17 @@ export namespace protocol {
         /** AssetIssueContract num */
         num?: (number|null);
 
-        /** AssetIssueContract startTime */
-        startTime?: (number|Long|null);
+        /** AssetIssueContract start_time */
+        start_time?: (number|Long|null);
 
-        /** AssetIssueContract endTime */
-        endTime?: (number|Long|null);
+        /** AssetIssueContract end_time */
+        end_time?: (number|Long|null);
 
         /** AssetIssueContract order */
         order?: (number|Long|null);
 
-        /** AssetIssueContract voteScore */
-        voteScore?: (number|null);
+        /** AssetIssueContract vote_score */
+        vote_score?: (number|null);
 
         /** AssetIssueContract description */
         description?: (Uint8Array|null);
@@ -1967,17 +1967,17 @@ export namespace protocol {
         /** AssetIssueContract url */
         url?: (Uint8Array|null);
 
-        /** AssetIssueContract freeAssetNetLimit */
-        freeAssetNetLimit?: (number|Long|null);
+        /** AssetIssueContract free_asset_net_limit */
+        free_asset_net_limit?: (number|Long|null);
 
-        /** AssetIssueContract publicFreeAssetNetLimit */
-        publicFreeAssetNetLimit?: (number|Long|null);
+        /** AssetIssueContract public_free_asset_net_limit */
+        public_free_asset_net_limit?: (number|Long|null);
 
-        /** AssetIssueContract publicFreeAssetNetUsage */
-        publicFreeAssetNetUsage?: (number|Long|null);
+        /** AssetIssueContract public_free_asset_net_usage */
+        public_free_asset_net_usage?: (number|Long|null);
 
-        /** AssetIssueContract publicLatestFreeNetTime */
-        publicLatestFreeNetTime?: (number|Long|null);
+        /** AssetIssueContract public_latest_free_net_time */
+        public_latest_free_net_time?: (number|Long|null);
     }
 
     /** Represents an AssetIssueContract. */
@@ -1992,8 +1992,8 @@ export namespace protocol {
         /** AssetIssueContract id. */
         public id: string;
 
-        /** AssetIssueContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** AssetIssueContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** AssetIssueContract name. */
         public name: Uint8Array;
@@ -2001,14 +2001,14 @@ export namespace protocol {
         /** AssetIssueContract abbr. */
         public abbr: Uint8Array;
 
-        /** AssetIssueContract totalSupply. */
-        public totalSupply: (number|Long);
+        /** AssetIssueContract total_supply. */
+        public total_supply: (number|Long);
 
-        /** AssetIssueContract frozenSupply. */
-        public frozenSupply: protocol.AssetIssueContract.IFrozenSupply[];
+        /** AssetIssueContract frozen_supply. */
+        public frozen_supply: protocol.AssetIssueContract.IFrozenSupply[];
 
-        /** AssetIssueContract trxNum. */
-        public trxNum: number;
+        /** AssetIssueContract trx_num. */
+        public trx_num: number;
 
         /** AssetIssueContract precision. */
         public precision: number;
@@ -2016,17 +2016,17 @@ export namespace protocol {
         /** AssetIssueContract num. */
         public num: number;
 
-        /** AssetIssueContract startTime. */
-        public startTime: (number|Long);
+        /** AssetIssueContract start_time. */
+        public start_time: (number|Long);
 
-        /** AssetIssueContract endTime. */
-        public endTime: (number|Long);
+        /** AssetIssueContract end_time. */
+        public end_time: (number|Long);
 
         /** AssetIssueContract order. */
         public order: (number|Long);
 
-        /** AssetIssueContract voteScore. */
-        public voteScore: number;
+        /** AssetIssueContract vote_score. */
+        public vote_score: number;
 
         /** AssetIssueContract description. */
         public description: Uint8Array;
@@ -2034,17 +2034,17 @@ export namespace protocol {
         /** AssetIssueContract url. */
         public url: Uint8Array;
 
-        /** AssetIssueContract freeAssetNetLimit. */
-        public freeAssetNetLimit: (number|Long);
+        /** AssetIssueContract free_asset_net_limit. */
+        public free_asset_net_limit: (number|Long);
 
-        /** AssetIssueContract publicFreeAssetNetLimit. */
-        public publicFreeAssetNetLimit: (number|Long);
+        /** AssetIssueContract public_free_asset_net_limit. */
+        public public_free_asset_net_limit: (number|Long);
 
-        /** AssetIssueContract publicFreeAssetNetUsage. */
-        public publicFreeAssetNetUsage: (number|Long);
+        /** AssetIssueContract public_free_asset_net_usage. */
+        public public_free_asset_net_usage: (number|Long);
 
-        /** AssetIssueContract publicLatestFreeNetTime. */
-        public publicLatestFreeNetTime: (number|Long);
+        /** AssetIssueContract public_latest_free_net_time. */
+        public public_latest_free_net_time: (number|Long);
 
         /**
          * Creates a new AssetIssueContract instance using the specified properties.
@@ -2122,11 +2122,11 @@ export namespace protocol {
         /** Properties of a FrozenSupply. */
         interface IFrozenSupply {
 
-            /** FrozenSupply frozenAmount */
-            frozenAmount?: (number|Long|null);
+            /** FrozenSupply frozen_amount */
+            frozen_amount?: (number|Long|null);
 
-            /** FrozenSupply frozenDays */
-            frozenDays?: (number|Long|null);
+            /** FrozenSupply frozen_days */
+            frozen_days?: (number|Long|null);
         }
 
         /** Represents a FrozenSupply. */
@@ -2138,11 +2138,11 @@ export namespace protocol {
              */
             constructor(properties?: protocol.AssetIssueContract.IFrozenSupply);
 
-            /** FrozenSupply frozenAmount. */
-            public frozenAmount: (number|Long);
+            /** FrozenSupply frozen_amount. */
+            public frozen_amount: (number|Long);
 
-            /** FrozenSupply frozenDays. */
-            public frozenDays: (number|Long);
+            /** FrozenSupply frozen_days. */
+            public frozen_days: (number|Long);
 
             /**
              * Creates a new FrozenSupply instance using the specified properties.
@@ -2219,14 +2219,14 @@ export namespace protocol {
     /** Properties of a ParticipateAssetIssueContract. */
     interface IParticipateAssetIssueContract {
 
-        /** ParticipateAssetIssueContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ParticipateAssetIssueContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ParticipateAssetIssueContract toAddress */
-        toAddress?: (Uint8Array|null);
+        /** ParticipateAssetIssueContract to_address */
+        to_address?: (Uint8Array|null);
 
-        /** ParticipateAssetIssueContract assetName */
-        assetName?: (Uint8Array|null);
+        /** ParticipateAssetIssueContract asset_name */
+        asset_name?: (Uint8Array|null);
 
         /** ParticipateAssetIssueContract amount */
         amount?: (number|Long|null);
@@ -2241,14 +2241,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IParticipateAssetIssueContract);
 
-        /** ParticipateAssetIssueContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ParticipateAssetIssueContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ParticipateAssetIssueContract toAddress. */
-        public toAddress: Uint8Array;
+        /** ParticipateAssetIssueContract to_address. */
+        public to_address: Uint8Array;
 
-        /** ParticipateAssetIssueContract assetName. */
-        public assetName: Uint8Array;
+        /** ParticipateAssetIssueContract asset_name. */
+        public asset_name: Uint8Array;
 
         /** ParticipateAssetIssueContract amount. */
         public amount: (number|Long);
@@ -2333,20 +2333,20 @@ export namespace protocol {
     /** Properties of a FreezeBalanceContract. */
     interface IFreezeBalanceContract {
 
-        /** FreezeBalanceContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** FreezeBalanceContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** FreezeBalanceContract frozenBalance */
-        frozenBalance?: (number|Long|null);
+        /** FreezeBalanceContract frozen_balance */
+        frozen_balance?: (number|Long|null);
 
-        /** FreezeBalanceContract frozenDuration */
-        frozenDuration?: (number|Long|null);
+        /** FreezeBalanceContract frozen_duration */
+        frozen_duration?: (number|Long|null);
 
         /** FreezeBalanceContract resource */
         resource?: (protocol.ResourceCode|null);
 
-        /** FreezeBalanceContract receiverAddress */
-        receiverAddress?: (Uint8Array|null);
+        /** FreezeBalanceContract receiver_address */
+        receiver_address?: (Uint8Array|null);
     }
 
     /** Represents a FreezeBalanceContract. */
@@ -2358,20 +2358,20 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IFreezeBalanceContract);
 
-        /** FreezeBalanceContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** FreezeBalanceContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** FreezeBalanceContract frozenBalance. */
-        public frozenBalance: (number|Long);
+        /** FreezeBalanceContract frozen_balance. */
+        public frozen_balance: (number|Long);
 
-        /** FreezeBalanceContract frozenDuration. */
-        public frozenDuration: (number|Long);
+        /** FreezeBalanceContract frozen_duration. */
+        public frozen_duration: (number|Long);
 
         /** FreezeBalanceContract resource. */
         public resource: protocol.ResourceCode;
 
-        /** FreezeBalanceContract receiverAddress. */
-        public receiverAddress: Uint8Array;
+        /** FreezeBalanceContract receiver_address. */
+        public receiver_address: Uint8Array;
 
         /**
          * Creates a new FreezeBalanceContract instance using the specified properties.
@@ -2447,14 +2447,14 @@ export namespace protocol {
     /** Properties of an UnfreezeBalanceContract. */
     interface IUnfreezeBalanceContract {
 
-        /** UnfreezeBalanceContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** UnfreezeBalanceContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** UnfreezeBalanceContract resource */
         resource?: (protocol.ResourceCode|null);
 
-        /** UnfreezeBalanceContract receiverAddress */
-        receiverAddress?: (Uint8Array|null);
+        /** UnfreezeBalanceContract receiver_address */
+        receiver_address?: (Uint8Array|null);
     }
 
     /** Represents an UnfreezeBalanceContract. */
@@ -2466,14 +2466,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IUnfreezeBalanceContract);
 
-        /** UnfreezeBalanceContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** UnfreezeBalanceContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** UnfreezeBalanceContract resource. */
         public resource: protocol.ResourceCode;
 
-        /** UnfreezeBalanceContract receiverAddress. */
-        public receiverAddress: Uint8Array;
+        /** UnfreezeBalanceContract receiver_address. */
+        public receiver_address: Uint8Array;
 
         /**
          * Creates a new UnfreezeBalanceContract instance using the specified properties.
@@ -2549,8 +2549,8 @@ export namespace protocol {
     /** Properties of an UnfreezeAssetContract. */
     interface IUnfreezeAssetContract {
 
-        /** UnfreezeAssetContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** UnfreezeAssetContract owner_address */
+        owner_address?: (Uint8Array|null);
     }
 
     /** Represents an UnfreezeAssetContract. */
@@ -2562,8 +2562,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IUnfreezeAssetContract);
 
-        /** UnfreezeAssetContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** UnfreezeAssetContract owner_address. */
+        public owner_address: Uint8Array;
 
         /**
          * Creates a new UnfreezeAssetContract instance using the specified properties.
@@ -2639,8 +2639,8 @@ export namespace protocol {
     /** Properties of a WithdrawBalanceContract. */
     interface IWithdrawBalanceContract {
 
-        /** WithdrawBalanceContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** WithdrawBalanceContract owner_address */
+        owner_address?: (Uint8Array|null);
     }
 
     /** Represents a WithdrawBalanceContract. */
@@ -2652,8 +2652,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IWithdrawBalanceContract);
 
-        /** WithdrawBalanceContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** WithdrawBalanceContract owner_address. */
+        public owner_address: Uint8Array;
 
         /**
          * Creates a new WithdrawBalanceContract instance using the specified properties.
@@ -2729,8 +2729,8 @@ export namespace protocol {
     /** Properties of an UpdateAssetContract. */
     interface IUpdateAssetContract {
 
-        /** UpdateAssetContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** UpdateAssetContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** UpdateAssetContract description */
         description?: (Uint8Array|null);
@@ -2738,11 +2738,11 @@ export namespace protocol {
         /** UpdateAssetContract url */
         url?: (Uint8Array|null);
 
-        /** UpdateAssetContract newLimit */
-        newLimit?: (number|Long|null);
+        /** UpdateAssetContract new_limit */
+        new_limit?: (number|Long|null);
 
-        /** UpdateAssetContract newPublicLimit */
-        newPublicLimit?: (number|Long|null);
+        /** UpdateAssetContract new_public_limit */
+        new_public_limit?: (number|Long|null);
     }
 
     /** Represents an UpdateAssetContract. */
@@ -2754,8 +2754,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IUpdateAssetContract);
 
-        /** UpdateAssetContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** UpdateAssetContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** UpdateAssetContract description. */
         public description: Uint8Array;
@@ -2763,11 +2763,11 @@ export namespace protocol {
         /** UpdateAssetContract url. */
         public url: Uint8Array;
 
-        /** UpdateAssetContract newLimit. */
-        public newLimit: (number|Long);
+        /** UpdateAssetContract new_limit. */
+        public new_limit: (number|Long);
 
-        /** UpdateAssetContract newPublicLimit. */
-        public newPublicLimit: (number|Long);
+        /** UpdateAssetContract new_public_limit. */
+        public new_public_limit: (number|Long);
 
         /**
          * Creates a new UpdateAssetContract instance using the specified properties.
@@ -2843,8 +2843,8 @@ export namespace protocol {
     /** Properties of a ProposalCreateContract. */
     interface IProposalCreateContract {
 
-        /** ProposalCreateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ProposalCreateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** ProposalCreateContract parameters */
         parameters?: ({ [k: string]: (number|Long) }|null);
@@ -2859,8 +2859,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IProposalCreateContract);
 
-        /** ProposalCreateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ProposalCreateContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** ProposalCreateContract parameters. */
         public parameters: { [k: string]: (number|Long) };
@@ -2939,14 +2939,14 @@ export namespace protocol {
     /** Properties of a ProposalApproveContract. */
     interface IProposalApproveContract {
 
-        /** ProposalApproveContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ProposalApproveContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ProposalApproveContract proposalId */
-        proposalId?: (number|Long|null);
+        /** ProposalApproveContract proposal_id */
+        proposal_id?: (number|Long|null);
 
-        /** ProposalApproveContract isAddApproval */
-        isAddApproval?: (boolean|null);
+        /** ProposalApproveContract is_add_approval */
+        is_add_approval?: (boolean|null);
     }
 
     /** Represents a ProposalApproveContract. */
@@ -2958,14 +2958,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IProposalApproveContract);
 
-        /** ProposalApproveContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ProposalApproveContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ProposalApproveContract proposalId. */
-        public proposalId: (number|Long);
+        /** ProposalApproveContract proposal_id. */
+        public proposal_id: (number|Long);
 
-        /** ProposalApproveContract isAddApproval. */
-        public isAddApproval: boolean;
+        /** ProposalApproveContract is_add_approval. */
+        public is_add_approval: boolean;
 
         /**
          * Creates a new ProposalApproveContract instance using the specified properties.
@@ -3041,11 +3041,11 @@ export namespace protocol {
     /** Properties of a ProposalDeleteContract. */
     interface IProposalDeleteContract {
 
-        /** ProposalDeleteContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ProposalDeleteContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ProposalDeleteContract proposalId */
-        proposalId?: (number|Long|null);
+        /** ProposalDeleteContract proposal_id */
+        proposal_id?: (number|Long|null);
     }
 
     /** Represents a ProposalDeleteContract. */
@@ -3057,11 +3057,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IProposalDeleteContract);
 
-        /** ProposalDeleteContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ProposalDeleteContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ProposalDeleteContract proposalId. */
-        public proposalId: (number|Long);
+        /** ProposalDeleteContract proposal_id. */
+        public proposal_id: (number|Long);
 
         /**
          * Creates a new ProposalDeleteContract instance using the specified properties.
@@ -3137,17 +3137,17 @@ export namespace protocol {
     /** Properties of a CreateSmartContract. */
     interface ICreateSmartContract {
 
-        /** CreateSmartContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** CreateSmartContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** CreateSmartContract newContract */
-        newContract?: (protocol.ISmartContract|null);
+        /** CreateSmartContract new_contract */
+        new_contract?: (protocol.ISmartContract|null);
 
-        /** CreateSmartContract callTokenValue */
-        callTokenValue?: (number|Long|null);
+        /** CreateSmartContract call_token_value */
+        call_token_value?: (number|Long|null);
 
-        /** CreateSmartContract tokenId */
-        tokenId?: (number|Long|null);
+        /** CreateSmartContract token_id */
+        token_id?: (number|Long|null);
     }
 
     /** Represents a CreateSmartContract. */
@@ -3159,17 +3159,17 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ICreateSmartContract);
 
-        /** CreateSmartContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** CreateSmartContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** CreateSmartContract newContract. */
-        public newContract?: (protocol.ISmartContract|null);
+        /** CreateSmartContract new_contract. */
+        public new_contract?: (protocol.ISmartContract|null);
 
-        /** CreateSmartContract callTokenValue. */
-        public callTokenValue: (number|Long);
+        /** CreateSmartContract call_token_value. */
+        public call_token_value: (number|Long);
 
-        /** CreateSmartContract tokenId. */
-        public tokenId: (number|Long);
+        /** CreateSmartContract token_id. */
+        public token_id: (number|Long);
 
         /**
          * Creates a new CreateSmartContract instance using the specified properties.
@@ -3245,23 +3245,23 @@ export namespace protocol {
     /** Properties of a TriggerSmartContract. */
     interface ITriggerSmartContract {
 
-        /** TriggerSmartContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** TriggerSmartContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** TriggerSmartContract contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** TriggerSmartContract contract_address */
+        contract_address?: (Uint8Array|null);
 
-        /** TriggerSmartContract callValue */
-        callValue?: (number|Long|null);
+        /** TriggerSmartContract call_value */
+        call_value?: (number|Long|null);
 
         /** TriggerSmartContract data */
         data?: (Uint8Array|null);
 
-        /** TriggerSmartContract callTokenValue */
-        callTokenValue?: (number|Long|null);
+        /** TriggerSmartContract call_token_value */
+        call_token_value?: (number|Long|null);
 
-        /** TriggerSmartContract tokenId */
-        tokenId?: (number|Long|null);
+        /** TriggerSmartContract token_id */
+        token_id?: (number|Long|null);
     }
 
     /** Represents a TriggerSmartContract. */
@@ -3273,23 +3273,23 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ITriggerSmartContract);
 
-        /** TriggerSmartContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** TriggerSmartContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** TriggerSmartContract contractAddress. */
-        public contractAddress: Uint8Array;
+        /** TriggerSmartContract contract_address. */
+        public contract_address: Uint8Array;
 
-        /** TriggerSmartContract callValue. */
-        public callValue: (number|Long);
+        /** TriggerSmartContract call_value. */
+        public call_value: (number|Long);
 
         /** TriggerSmartContract data. */
         public data: Uint8Array;
 
-        /** TriggerSmartContract callTokenValue. */
-        public callTokenValue: (number|Long);
+        /** TriggerSmartContract call_token_value. */
+        public call_token_value: (number|Long);
 
-        /** TriggerSmartContract tokenId. */
-        public tokenId: (number|Long);
+        /** TriggerSmartContract token_id. */
+        public token_id: (number|Long);
 
         /**
          * Creates a new TriggerSmartContract instance using the specified properties.
@@ -3365,8 +3365,8 @@ export namespace protocol {
     /** Properties of a BuyStorageContract. */
     interface IBuyStorageContract {
 
-        /** BuyStorageContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** BuyStorageContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** BuyStorageContract quant */
         quant?: (number|Long|null);
@@ -3381,8 +3381,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IBuyStorageContract);
 
-        /** BuyStorageContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** BuyStorageContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** BuyStorageContract quant. */
         public quant: (number|Long);
@@ -3461,8 +3461,8 @@ export namespace protocol {
     /** Properties of a BuyStorageBytesContract. */
     interface IBuyStorageBytesContract {
 
-        /** BuyStorageBytesContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** BuyStorageBytesContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** BuyStorageBytesContract bytes */
         bytes?: (number|Long|null);
@@ -3477,8 +3477,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IBuyStorageBytesContract);
 
-        /** BuyStorageBytesContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** BuyStorageBytesContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** BuyStorageBytesContract bytes. */
         public bytes: (number|Long);
@@ -3557,11 +3557,11 @@ export namespace protocol {
     /** Properties of a SellStorageContract. */
     interface ISellStorageContract {
 
-        /** SellStorageContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** SellStorageContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** SellStorageContract storageBytes */
-        storageBytes?: (number|Long|null);
+        /** SellStorageContract storage_bytes */
+        storage_bytes?: (number|Long|null);
     }
 
     /** Represents a SellStorageContract. */
@@ -3573,11 +3573,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ISellStorageContract);
 
-        /** SellStorageContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** SellStorageContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** SellStorageContract storageBytes. */
-        public storageBytes: (number|Long);
+        /** SellStorageContract storage_bytes. */
+        public storage_bytes: (number|Long);
 
         /**
          * Creates a new SellStorageContract instance using the specified properties.
@@ -3653,20 +3653,20 @@ export namespace protocol {
     /** Properties of an ExchangeCreateContract. */
     interface IExchangeCreateContract {
 
-        /** ExchangeCreateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ExchangeCreateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ExchangeCreateContract firstTokenId */
-        firstTokenId?: (Uint8Array|null);
+        /** ExchangeCreateContract first_token_id */
+        first_token_id?: (Uint8Array|null);
 
-        /** ExchangeCreateContract firstTokenBalance */
-        firstTokenBalance?: (number|Long|null);
+        /** ExchangeCreateContract first_token_balance */
+        first_token_balance?: (number|Long|null);
 
-        /** ExchangeCreateContract secondTokenId */
-        secondTokenId?: (Uint8Array|null);
+        /** ExchangeCreateContract second_token_id */
+        second_token_id?: (Uint8Array|null);
 
-        /** ExchangeCreateContract secondTokenBalance */
-        secondTokenBalance?: (number|Long|null);
+        /** ExchangeCreateContract second_token_balance */
+        second_token_balance?: (number|Long|null);
     }
 
     /** Represents an ExchangeCreateContract. */
@@ -3678,20 +3678,20 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IExchangeCreateContract);
 
-        /** ExchangeCreateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ExchangeCreateContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ExchangeCreateContract firstTokenId. */
-        public firstTokenId: Uint8Array;
+        /** ExchangeCreateContract first_token_id. */
+        public first_token_id: Uint8Array;
 
-        /** ExchangeCreateContract firstTokenBalance. */
-        public firstTokenBalance: (number|Long);
+        /** ExchangeCreateContract first_token_balance. */
+        public first_token_balance: (number|Long);
 
-        /** ExchangeCreateContract secondTokenId. */
-        public secondTokenId: Uint8Array;
+        /** ExchangeCreateContract second_token_id. */
+        public second_token_id: Uint8Array;
 
-        /** ExchangeCreateContract secondTokenBalance. */
-        public secondTokenBalance: (number|Long);
+        /** ExchangeCreateContract second_token_balance. */
+        public second_token_balance: (number|Long);
 
         /**
          * Creates a new ExchangeCreateContract instance using the specified properties.
@@ -3767,14 +3767,14 @@ export namespace protocol {
     /** Properties of an ExchangeInjectContract. */
     interface IExchangeInjectContract {
 
-        /** ExchangeInjectContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ExchangeInjectContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ExchangeInjectContract exchangeId */
-        exchangeId?: (number|Long|null);
+        /** ExchangeInjectContract exchange_id */
+        exchange_id?: (number|Long|null);
 
-        /** ExchangeInjectContract tokenId */
-        tokenId?: (Uint8Array|null);
+        /** ExchangeInjectContract token_id */
+        token_id?: (Uint8Array|null);
 
         /** ExchangeInjectContract quant */
         quant?: (number|Long|null);
@@ -3789,14 +3789,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IExchangeInjectContract);
 
-        /** ExchangeInjectContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ExchangeInjectContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ExchangeInjectContract exchangeId. */
-        public exchangeId: (number|Long);
+        /** ExchangeInjectContract exchange_id. */
+        public exchange_id: (number|Long);
 
-        /** ExchangeInjectContract tokenId. */
-        public tokenId: Uint8Array;
+        /** ExchangeInjectContract token_id. */
+        public token_id: Uint8Array;
 
         /** ExchangeInjectContract quant. */
         public quant: (number|Long);
@@ -3875,14 +3875,14 @@ export namespace protocol {
     /** Properties of an ExchangeWithdrawContract. */
     interface IExchangeWithdrawContract {
 
-        /** ExchangeWithdrawContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ExchangeWithdrawContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ExchangeWithdrawContract exchangeId */
-        exchangeId?: (number|Long|null);
+        /** ExchangeWithdrawContract exchange_id */
+        exchange_id?: (number|Long|null);
 
-        /** ExchangeWithdrawContract tokenId */
-        tokenId?: (Uint8Array|null);
+        /** ExchangeWithdrawContract token_id */
+        token_id?: (Uint8Array|null);
 
         /** ExchangeWithdrawContract quant */
         quant?: (number|Long|null);
@@ -3897,14 +3897,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IExchangeWithdrawContract);
 
-        /** ExchangeWithdrawContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ExchangeWithdrawContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ExchangeWithdrawContract exchangeId. */
-        public exchangeId: (number|Long);
+        /** ExchangeWithdrawContract exchange_id. */
+        public exchange_id: (number|Long);
 
-        /** ExchangeWithdrawContract tokenId. */
-        public tokenId: Uint8Array;
+        /** ExchangeWithdrawContract token_id. */
+        public token_id: Uint8Array;
 
         /** ExchangeWithdrawContract quant. */
         public quant: (number|Long);
@@ -3983,14 +3983,14 @@ export namespace protocol {
     /** Properties of an ExchangeTransactionContract. */
     interface IExchangeTransactionContract {
 
-        /** ExchangeTransactionContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** ExchangeTransactionContract owner_address */
+        owner_address?: (Uint8Array|null);
 
-        /** ExchangeTransactionContract exchangeId */
-        exchangeId?: (number|Long|null);
+        /** ExchangeTransactionContract exchange_id */
+        exchange_id?: (number|Long|null);
 
-        /** ExchangeTransactionContract tokenId */
-        tokenId?: (Uint8Array|null);
+        /** ExchangeTransactionContract token_id */
+        token_id?: (Uint8Array|null);
 
         /** ExchangeTransactionContract quant */
         quant?: (number|Long|null);
@@ -4008,14 +4008,14 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IExchangeTransactionContract);
 
-        /** ExchangeTransactionContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** ExchangeTransactionContract owner_address. */
+        public owner_address: Uint8Array;
 
-        /** ExchangeTransactionContract exchangeId. */
-        public exchangeId: (number|Long);
+        /** ExchangeTransactionContract exchange_id. */
+        public exchange_id: (number|Long);
 
-        /** ExchangeTransactionContract tokenId. */
-        public tokenId: Uint8Array;
+        /** ExchangeTransactionContract token_id. */
+        public token_id: Uint8Array;
 
         /** ExchangeTransactionContract quant. */
         public quant: (number|Long);
@@ -4097,8 +4097,8 @@ export namespace protocol {
     /** Properties of an AccountPermissionUpdateContract. */
     interface IAccountPermissionUpdateContract {
 
-        /** AccountPermissionUpdateContract ownerAddress */
-        ownerAddress?: (Uint8Array|null);
+        /** AccountPermissionUpdateContract owner_address */
+        owner_address?: (Uint8Array|null);
 
         /** AccountPermissionUpdateContract owner */
         owner?: (protocol.IPermission|null);
@@ -4119,8 +4119,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IAccountPermissionUpdateContract);
 
-        /** AccountPermissionUpdateContract ownerAddress. */
-        public ownerAddress: Uint8Array;
+        /** AccountPermissionUpdateContract owner_address. */
+        public owner_address: Uint8Array;
 
         /** AccountPermissionUpdateContract owner. */
         public owner?: (protocol.IPermission|null);
@@ -4308,11 +4308,11 @@ export namespace protocol {
     /** Properties of a Vote. */
     interface IVote {
 
-        /** Vote voteAddress */
-        voteAddress?: (Uint8Array|null);
+        /** Vote vote_address */
+        vote_address?: (Uint8Array|null);
 
-        /** Vote voteCount */
-        voteCount?: (number|Long|null);
+        /** Vote vote_count */
+        vote_count?: (number|Long|null);
     }
 
     /** Represents a Vote. */
@@ -4324,11 +4324,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IVote);
 
-        /** Vote voteAddress. */
-        public voteAddress: Uint8Array;
+        /** Vote vote_address. */
+        public vote_address: Uint8Array;
 
-        /** Vote voteCount. */
-        public voteCount: (number|Long);
+        /** Vote vote_count. */
+        public vote_count: (number|Long);
 
         /**
          * Creates a new Vote instance using the specified properties.
@@ -4404,20 +4404,20 @@ export namespace protocol {
     /** Properties of a Proposal. */
     interface IProposal {
 
-        /** Proposal proposalId */
-        proposalId?: (number|Long|null);
+        /** Proposal proposal_id */
+        proposal_id?: (number|Long|null);
 
-        /** Proposal proposerAddress */
-        proposerAddress?: (Uint8Array|null);
+        /** Proposal proposer_address */
+        proposer_address?: (Uint8Array|null);
 
         /** Proposal parameters */
         parameters?: ({ [k: string]: (number|Long) }|null);
 
-        /** Proposal expirationTime */
-        expirationTime?: (number|Long|null);
+        /** Proposal expiration_time */
+        expiration_time?: (number|Long|null);
 
-        /** Proposal createTime */
-        createTime?: (number|Long|null);
+        /** Proposal create_time */
+        create_time?: (number|Long|null);
 
         /** Proposal approvals */
         approvals?: (Uint8Array[]|null);
@@ -4435,20 +4435,20 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IProposal);
 
-        /** Proposal proposalId. */
-        public proposalId: (number|Long);
+        /** Proposal proposal_id. */
+        public proposal_id: (number|Long);
 
-        /** Proposal proposerAddress. */
-        public proposerAddress: Uint8Array;
+        /** Proposal proposer_address. */
+        public proposer_address: Uint8Array;
 
         /** Proposal parameters. */
         public parameters: { [k: string]: (number|Long) };
 
-        /** Proposal expirationTime. */
-        public expirationTime: (number|Long);
+        /** Proposal expiration_time. */
+        public expiration_time: (number|Long);
 
-        /** Proposal createTime. */
-        public createTime: (number|Long);
+        /** Proposal create_time. */
+        public create_time: (number|Long);
 
         /** Proposal approvals. */
         public approvals: Uint8Array[];
@@ -4541,26 +4541,26 @@ export namespace protocol {
     /** Properties of an Exchange. */
     interface IExchange {
 
-        /** Exchange exchangeId */
-        exchangeId?: (number|Long|null);
+        /** Exchange exchange_id */
+        exchange_id?: (number|Long|null);
 
-        /** Exchange creatorAddress */
-        creatorAddress?: (Uint8Array|null);
+        /** Exchange creator_address */
+        creator_address?: (Uint8Array|null);
 
-        /** Exchange createTime */
-        createTime?: (number|Long|null);
+        /** Exchange create_time */
+        create_time?: (number|Long|null);
 
-        /** Exchange firstTokenId */
-        firstTokenId?: (Uint8Array|null);
+        /** Exchange first_token_id */
+        first_token_id?: (Uint8Array|null);
 
-        /** Exchange firstTokenBalance */
-        firstTokenBalance?: (number|Long|null);
+        /** Exchange first_token_balance */
+        first_token_balance?: (number|Long|null);
 
-        /** Exchange secondTokenId */
-        secondTokenId?: (Uint8Array|null);
+        /** Exchange second_token_id */
+        second_token_id?: (Uint8Array|null);
 
-        /** Exchange secondTokenBalance */
-        secondTokenBalance?: (number|Long|null);
+        /** Exchange second_token_balance */
+        second_token_balance?: (number|Long|null);
     }
 
     /** Represents an Exchange. */
@@ -4572,26 +4572,26 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IExchange);
 
-        /** Exchange exchangeId. */
-        public exchangeId: (number|Long);
+        /** Exchange exchange_id. */
+        public exchange_id: (number|Long);
 
-        /** Exchange creatorAddress. */
-        public creatorAddress: Uint8Array;
+        /** Exchange creator_address. */
+        public creator_address: Uint8Array;
 
-        /** Exchange createTime. */
-        public createTime: (number|Long);
+        /** Exchange create_time. */
+        public create_time: (number|Long);
 
-        /** Exchange firstTokenId. */
-        public firstTokenId: Uint8Array;
+        /** Exchange first_token_id. */
+        public first_token_id: Uint8Array;
 
-        /** Exchange firstTokenBalance. */
-        public firstTokenBalance: (number|Long);
+        /** Exchange first_token_balance. */
+        public first_token_balance: (number|Long);
 
-        /** Exchange secondTokenId. */
-        public secondTokenId: Uint8Array;
+        /** Exchange second_token_id. */
+        public second_token_id: Uint8Array;
 
-        /** Exchange secondTokenBalance. */
-        public secondTokenBalance: (number|Long);
+        /** Exchange second_token_balance. */
+        public second_token_balance: (number|Long);
 
         /**
          * Creates a new Exchange instance using the specified properties.
@@ -4856,8 +4856,8 @@ export namespace protocol {
     /** Properties of an Account. */
     interface IAccount {
 
-        /** Account accountName */
-        accountName?: (Uint8Array|null);
+        /** Account account_name */
+        account_name?: (Uint8Array|null);
 
         /** Account type */
         type?: (protocol.AccountType|null);
@@ -4880,83 +4880,83 @@ export namespace protocol {
         /** Account frozen */
         frozen?: (protocol.Account.IFrozen[]|null);
 
-        /** Account netUsage */
-        netUsage?: (number|Long|null);
+        /** Account net_usage */
+        net_usage?: (number|Long|null);
 
-        /** Account acquiredDelegatedFrozenBalanceForBandwidth */
-        acquiredDelegatedFrozenBalanceForBandwidth?: (number|Long|null);
+        /** Account acquired_delegated_frozen_balance_for_bandwidth */
+        acquired_delegated_frozen_balance_for_bandwidth?: (number|Long|null);
 
-        /** Account delegatedFrozenBalanceForBandwidth */
-        delegatedFrozenBalanceForBandwidth?: (number|Long|null);
+        /** Account delegated_frozen_balance_for_bandwidth */
+        delegated_frozen_balance_for_bandwidth?: (number|Long|null);
 
-        /** Account createTime */
-        createTime?: (number|Long|null);
+        /** Account create_time */
+        create_time?: (number|Long|null);
 
-        /** Account latestOprationTime */
-        latestOprationTime?: (number|Long|null);
+        /** Account latest_opration_time */
+        latest_opration_time?: (number|Long|null);
 
         /** Account allowance */
         allowance?: (number|Long|null);
 
-        /** Account latestWithdrawTime */
-        latestWithdrawTime?: (number|Long|null);
+        /** Account latest_withdraw_time */
+        latest_withdraw_time?: (number|Long|null);
 
         /** Account code */
         code?: (Uint8Array|null);
 
-        /** Account isWitness */
-        isWitness?: (boolean|null);
+        /** Account is_witness */
+        is_witness?: (boolean|null);
 
-        /** Account isCommittee */
-        isCommittee?: (boolean|null);
+        /** Account is_committee */
+        is_committee?: (boolean|null);
 
-        /** Account frozenSupply */
-        frozenSupply?: (protocol.Account.IFrozen[]|null);
+        /** Account frozen_supply */
+        frozen_supply?: (protocol.Account.IFrozen[]|null);
 
-        /** Account assetIssuedName */
-        assetIssuedName?: (Uint8Array|null);
+        /** Account asset_issued_name */
+        asset_issued_name?: (Uint8Array|null);
 
-        /** Account assetIssued_ID */
-        assetIssued_ID?: (Uint8Array|null);
+        /** Account asset_issued_ID */
+        asset_issued_ID?: (Uint8Array|null);
 
-        /** Account latestAssetOperationTime */
-        latestAssetOperationTime?: ({ [k: string]: (number|Long) }|null);
+        /** Account latest_asset_operation_time */
+        latest_asset_operation_time?: ({ [k: string]: (number|Long) }|null);
 
-        /** Account latestAssetOperationTimeV2 */
-        latestAssetOperationTimeV2?: ({ [k: string]: (number|Long) }|null);
+        /** Account latest_asset_operation_timeV2 */
+        latest_asset_operation_timeV2?: ({ [k: string]: (number|Long) }|null);
 
-        /** Account freeNetUsage */
-        freeNetUsage?: (number|Long|null);
+        /** Account free_net_usage */
+        free_net_usage?: (number|Long|null);
 
-        /** Account freeAssetNetUsage */
-        freeAssetNetUsage?: ({ [k: string]: (number|Long) }|null);
+        /** Account free_asset_net_usage */
+        free_asset_net_usage?: ({ [k: string]: (number|Long) }|null);
 
-        /** Account freeAssetNetUsageV2 */
-        freeAssetNetUsageV2?: ({ [k: string]: (number|Long) }|null);
+        /** Account free_asset_net_usageV2 */
+        free_asset_net_usageV2?: ({ [k: string]: (number|Long) }|null);
 
-        /** Account latestConsumeTime */
-        latestConsumeTime?: (number|Long|null);
+        /** Account latest_consume_time */
+        latest_consume_time?: (number|Long|null);
 
-        /** Account latestConsumeFreeTime */
-        latestConsumeFreeTime?: (number|Long|null);
+        /** Account latest_consume_free_time */
+        latest_consume_free_time?: (number|Long|null);
 
-        /** Account accountId */
-        accountId?: (Uint8Array|null);
+        /** Account account_id */
+        account_id?: (Uint8Array|null);
 
-        /** Account accountResource */
-        accountResource?: (protocol.Account.IAccountResource|null);
+        /** Account account_resource */
+        account_resource?: (protocol.Account.IAccountResource|null);
 
         /** Account codeHash */
         codeHash?: (Uint8Array|null);
 
-        /** Account ownerPermission */
-        ownerPermission?: (protocol.IPermission|null);
+        /** Account owner_permission */
+        owner_permission?: (protocol.IPermission|null);
 
-        /** Account witnessPermission */
-        witnessPermission?: (protocol.IPermission|null);
+        /** Account witness_permission */
+        witness_permission?: (protocol.IPermission|null);
 
-        /** Account activePermission */
-        activePermission?: (protocol.IPermission[]|null);
+        /** Account active_permission */
+        active_permission?: (protocol.IPermission[]|null);
     }
 
     /** Represents an Account. */
@@ -4968,8 +4968,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IAccount);
 
-        /** Account accountName. */
-        public accountName: Uint8Array;
+        /** Account account_name. */
+        public account_name: Uint8Array;
 
         /** Account type. */
         public type: protocol.AccountType;
@@ -4992,83 +4992,83 @@ export namespace protocol {
         /** Account frozen. */
         public frozen: protocol.Account.IFrozen[];
 
-        /** Account netUsage. */
-        public netUsage: (number|Long);
+        /** Account net_usage. */
+        public net_usage: (number|Long);
 
-        /** Account acquiredDelegatedFrozenBalanceForBandwidth. */
-        public acquiredDelegatedFrozenBalanceForBandwidth: (number|Long);
+        /** Account acquired_delegated_frozen_balance_for_bandwidth. */
+        public acquired_delegated_frozen_balance_for_bandwidth: (number|Long);
 
-        /** Account delegatedFrozenBalanceForBandwidth. */
-        public delegatedFrozenBalanceForBandwidth: (number|Long);
+        /** Account delegated_frozen_balance_for_bandwidth. */
+        public delegated_frozen_balance_for_bandwidth: (number|Long);
 
-        /** Account createTime. */
-        public createTime: (number|Long);
+        /** Account create_time. */
+        public create_time: (number|Long);
 
-        /** Account latestOprationTime. */
-        public latestOprationTime: (number|Long);
+        /** Account latest_opration_time. */
+        public latest_opration_time: (number|Long);
 
         /** Account allowance. */
         public allowance: (number|Long);
 
-        /** Account latestWithdrawTime. */
-        public latestWithdrawTime: (number|Long);
+        /** Account latest_withdraw_time. */
+        public latest_withdraw_time: (number|Long);
 
         /** Account code. */
         public code: Uint8Array;
 
-        /** Account isWitness. */
-        public isWitness: boolean;
+        /** Account is_witness. */
+        public is_witness: boolean;
 
-        /** Account isCommittee. */
-        public isCommittee: boolean;
+        /** Account is_committee. */
+        public is_committee: boolean;
 
-        /** Account frozenSupply. */
-        public frozenSupply: protocol.Account.IFrozen[];
+        /** Account frozen_supply. */
+        public frozen_supply: protocol.Account.IFrozen[];
 
-        /** Account assetIssuedName. */
-        public assetIssuedName: Uint8Array;
+        /** Account asset_issued_name. */
+        public asset_issued_name: Uint8Array;
 
-        /** Account assetIssued_ID. */
-        public assetIssued_ID: Uint8Array;
+        /** Account asset_issued_ID. */
+        public asset_issued_ID: Uint8Array;
 
-        /** Account latestAssetOperationTime. */
-        public latestAssetOperationTime: { [k: string]: (number|Long) };
+        /** Account latest_asset_operation_time. */
+        public latest_asset_operation_time: { [k: string]: (number|Long) };
 
-        /** Account latestAssetOperationTimeV2. */
-        public latestAssetOperationTimeV2: { [k: string]: (number|Long) };
+        /** Account latest_asset_operation_timeV2. */
+        public latest_asset_operation_timeV2: { [k: string]: (number|Long) };
 
-        /** Account freeNetUsage. */
-        public freeNetUsage: (number|Long);
+        /** Account free_net_usage. */
+        public free_net_usage: (number|Long);
 
-        /** Account freeAssetNetUsage. */
-        public freeAssetNetUsage: { [k: string]: (number|Long) };
+        /** Account free_asset_net_usage. */
+        public free_asset_net_usage: { [k: string]: (number|Long) };
 
-        /** Account freeAssetNetUsageV2. */
-        public freeAssetNetUsageV2: { [k: string]: (number|Long) };
+        /** Account free_asset_net_usageV2. */
+        public free_asset_net_usageV2: { [k: string]: (number|Long) };
 
-        /** Account latestConsumeTime. */
-        public latestConsumeTime: (number|Long);
+        /** Account latest_consume_time. */
+        public latest_consume_time: (number|Long);
 
-        /** Account latestConsumeFreeTime. */
-        public latestConsumeFreeTime: (number|Long);
+        /** Account latest_consume_free_time. */
+        public latest_consume_free_time: (number|Long);
 
-        /** Account accountId. */
-        public accountId: Uint8Array;
+        /** Account account_id. */
+        public account_id: Uint8Array;
 
-        /** Account accountResource. */
-        public accountResource?: (protocol.Account.IAccountResource|null);
+        /** Account account_resource. */
+        public account_resource?: (protocol.Account.IAccountResource|null);
 
         /** Account codeHash. */
         public codeHash: Uint8Array;
 
-        /** Account ownerPermission. */
-        public ownerPermission?: (protocol.IPermission|null);
+        /** Account owner_permission. */
+        public owner_permission?: (protocol.IPermission|null);
 
-        /** Account witnessPermission. */
-        public witnessPermission?: (protocol.IPermission|null);
+        /** Account witness_permission. */
+        public witness_permission?: (protocol.IPermission|null);
 
-        /** Account activePermission. */
-        public activePermission: protocol.IPermission[];
+        /** Account active_permission. */
+        public active_permission: protocol.IPermission[];
 
         /**
          * Creates a new Account instance using the specified properties.
@@ -5146,11 +5146,11 @@ export namespace protocol {
         /** Properties of a Frozen. */
         interface IFrozen {
 
-            /** Frozen frozenBalance */
-            frozenBalance?: (number|Long|null);
+            /** Frozen frozen_balance */
+            frozen_balance?: (number|Long|null);
 
-            /** Frozen expireTime */
-            expireTime?: (number|Long|null);
+            /** Frozen expire_time */
+            expire_time?: (number|Long|null);
         }
 
         /** Represents a Frozen. */
@@ -5162,11 +5162,11 @@ export namespace protocol {
              */
             constructor(properties?: protocol.Account.IFrozen);
 
-            /** Frozen frozenBalance. */
-            public frozenBalance: (number|Long);
+            /** Frozen frozen_balance. */
+            public frozen_balance: (number|Long);
 
-            /** Frozen expireTime. */
-            public expireTime: (number|Long);
+            /** Frozen expire_time. */
+            public expire_time: (number|Long);
 
             /**
              * Creates a new Frozen instance using the specified properties.
@@ -5242,29 +5242,29 @@ export namespace protocol {
         /** Properties of an AccountResource. */
         interface IAccountResource {
 
-            /** AccountResource energyUsage */
-            energyUsage?: (number|Long|null);
+            /** AccountResource energy_usage */
+            energy_usage?: (number|Long|null);
 
-            /** AccountResource frozenBalanceForEnergy */
-            frozenBalanceForEnergy?: (protocol.Account.IFrozen|null);
+            /** AccountResource frozen_balance_for_energy */
+            frozen_balance_for_energy?: (protocol.Account.IFrozen|null);
 
-            /** AccountResource latestConsumeTimeForEnergy */
-            latestConsumeTimeForEnergy?: (number|Long|null);
+            /** AccountResource latest_consume_time_for_energy */
+            latest_consume_time_for_energy?: (number|Long|null);
 
-            /** AccountResource acquiredDelegatedFrozenBalanceForEnergy */
-            acquiredDelegatedFrozenBalanceForEnergy?: (number|Long|null);
+            /** AccountResource acquired_delegated_frozen_balance_for_energy */
+            acquired_delegated_frozen_balance_for_energy?: (number|Long|null);
 
-            /** AccountResource delegatedFrozenBalanceForEnergy */
-            delegatedFrozenBalanceForEnergy?: (number|Long|null);
+            /** AccountResource delegated_frozen_balance_for_energy */
+            delegated_frozen_balance_for_energy?: (number|Long|null);
 
-            /** AccountResource storageLimit */
-            storageLimit?: (number|Long|null);
+            /** AccountResource storage_limit */
+            storage_limit?: (number|Long|null);
 
-            /** AccountResource storageUsage */
-            storageUsage?: (number|Long|null);
+            /** AccountResource storage_usage */
+            storage_usage?: (number|Long|null);
 
-            /** AccountResource latestExchangeStorageTime */
-            latestExchangeStorageTime?: (number|Long|null);
+            /** AccountResource latest_exchange_storage_time */
+            latest_exchange_storage_time?: (number|Long|null);
         }
 
         /** Represents an AccountResource. */
@@ -5276,29 +5276,29 @@ export namespace protocol {
              */
             constructor(properties?: protocol.Account.IAccountResource);
 
-            /** AccountResource energyUsage. */
-            public energyUsage: (number|Long);
+            /** AccountResource energy_usage. */
+            public energy_usage: (number|Long);
 
-            /** AccountResource frozenBalanceForEnergy. */
-            public frozenBalanceForEnergy?: (protocol.Account.IFrozen|null);
+            /** AccountResource frozen_balance_for_energy. */
+            public frozen_balance_for_energy?: (protocol.Account.IFrozen|null);
 
-            /** AccountResource latestConsumeTimeForEnergy. */
-            public latestConsumeTimeForEnergy: (number|Long);
+            /** AccountResource latest_consume_time_for_energy. */
+            public latest_consume_time_for_energy: (number|Long);
 
-            /** AccountResource acquiredDelegatedFrozenBalanceForEnergy. */
-            public acquiredDelegatedFrozenBalanceForEnergy: (number|Long);
+            /** AccountResource acquired_delegated_frozen_balance_for_energy. */
+            public acquired_delegated_frozen_balance_for_energy: (number|Long);
 
-            /** AccountResource delegatedFrozenBalanceForEnergy. */
-            public delegatedFrozenBalanceForEnergy: (number|Long);
+            /** AccountResource delegated_frozen_balance_for_energy. */
+            public delegated_frozen_balance_for_energy: (number|Long);
 
-            /** AccountResource storageLimit. */
-            public storageLimit: (number|Long);
+            /** AccountResource storage_limit. */
+            public storage_limit: (number|Long);
 
-            /** AccountResource storageUsage. */
-            public storageUsage: (number|Long);
+            /** AccountResource storage_usage. */
+            public storage_usage: (number|Long);
 
-            /** AccountResource latestExchangeStorageTime. */
-            public latestExchangeStorageTime: (number|Long);
+            /** AccountResource latest_exchange_storage_time. */
+            public latest_exchange_storage_time: (number|Long);
 
             /**
              * Creates a new AccountResource instance using the specified properties.
@@ -5477,17 +5477,17 @@ export namespace protocol {
         /** DelegatedResource to */
         to?: (Uint8Array|null);
 
-        /** DelegatedResource frozenBalanceForBandwidth */
-        frozenBalanceForBandwidth?: (number|Long|null);
+        /** DelegatedResource frozen_balance_for_bandwidth */
+        frozen_balance_for_bandwidth?: (number|Long|null);
 
-        /** DelegatedResource frozenBalanceForEnergy */
-        frozenBalanceForEnergy?: (number|Long|null);
+        /** DelegatedResource frozen_balance_for_energy */
+        frozen_balance_for_energy?: (number|Long|null);
 
-        /** DelegatedResource expireTimeForBandwidth */
-        expireTimeForBandwidth?: (number|Long|null);
+        /** DelegatedResource expire_time_for_bandwidth */
+        expire_time_for_bandwidth?: (number|Long|null);
 
-        /** DelegatedResource expireTimeForEnergy */
-        expireTimeForEnergy?: (number|Long|null);
+        /** DelegatedResource expire_time_for_energy */
+        expire_time_for_energy?: (number|Long|null);
     }
 
     /** Represents a DelegatedResource. */
@@ -5505,17 +5505,17 @@ export namespace protocol {
         /** DelegatedResource to. */
         public to: Uint8Array;
 
-        /** DelegatedResource frozenBalanceForBandwidth. */
-        public frozenBalanceForBandwidth: (number|Long);
+        /** DelegatedResource frozen_balance_for_bandwidth. */
+        public frozen_balance_for_bandwidth: (number|Long);
 
-        /** DelegatedResource frozenBalanceForEnergy. */
-        public frozenBalanceForEnergy: (number|Long);
+        /** DelegatedResource frozen_balance_for_energy. */
+        public frozen_balance_for_energy: (number|Long);
 
-        /** DelegatedResource expireTimeForBandwidth. */
-        public expireTimeForBandwidth: (number|Long);
+        /** DelegatedResource expire_time_for_bandwidth. */
+        public expire_time_for_bandwidth: (number|Long);
 
-        /** DelegatedResource expireTimeForEnergy. */
-        public expireTimeForEnergy: (number|Long);
+        /** DelegatedResource expire_time_for_energy. */
+        public expire_time_for_energy: (number|Long);
 
         /**
          * Creates a new DelegatedResource instance using the specified properties.
@@ -5594,8 +5594,8 @@ export namespace protocol {
         /** authority account */
         account?: (protocol.IAccountId|null);
 
-        /** authority permissionName */
-        permissionName?: (Uint8Array|null);
+        /** authority permission_name */
+        permission_name?: (Uint8Array|null);
     }
 
     /** Represents an authority. */
@@ -5610,8 +5610,8 @@ export namespace protocol {
         /** authority account. */
         public account?: (protocol.IAccountId|null);
 
-        /** authority permissionName. */
-        public permissionName: Uint8Array;
+        /** authority permission_name. */
+        public permission_name: Uint8Array;
 
         /**
          * Creates a new authority instance using the specified properties.
@@ -5693,14 +5693,14 @@ export namespace protocol {
         /** Permission id */
         id?: (number|null);
 
-        /** Permission permissionName */
-        permissionName?: (string|null);
+        /** Permission permission_name */
+        permission_name?: (string|null);
 
         /** Permission threshold */
         threshold?: (number|Long|null);
 
-        /** Permission parentId */
-        parentId?: (number|null);
+        /** Permission parent_id */
+        parent_id?: (number|null);
 
         /** Permission operations */
         operations?: (Uint8Array|null);
@@ -5724,14 +5724,14 @@ export namespace protocol {
         /** Permission id. */
         public id: number;
 
-        /** Permission permissionName. */
-        public permissionName: string;
+        /** Permission permission_name. */
+        public permission_name: string;
 
         /** Permission threshold. */
         public threshold: (number|Long);
 
-        /** Permission parentId. */
-        public parentId: number;
+        /** Permission parent_id. */
+        public parent_id: number;
 
         /** Permission operations. */
         public operations: Uint8Array;
@@ -5964,11 +5964,11 @@ export namespace protocol {
         /** Votes address */
         address?: (Uint8Array|null);
 
-        /** Votes oldVotes */
-        oldVotes?: (protocol.IVote[]|null);
+        /** Votes old_votes */
+        old_votes?: (protocol.IVote[]|null);
 
-        /** Votes newVotes */
-        newVotes?: (protocol.IVote[]|null);
+        /** Votes new_votes */
+        new_votes?: (protocol.IVote[]|null);
     }
 
     /** Represents a Votes. */
@@ -5983,11 +5983,11 @@ export namespace protocol {
         /** Votes address. */
         public address: Uint8Array;
 
-        /** Votes oldVotes. */
-        public oldVotes: protocol.IVote[];
+        /** Votes old_votes. */
+        public old_votes: protocol.IVote[];
 
-        /** Votes newVotes. */
-        public newVotes: protocol.IVote[];
+        /** Votes new_votes. */
+        public new_votes: protocol.IVote[];
 
         /**
          * Creates a new Votes instance using the specified properties.
@@ -6159,8 +6159,8 @@ export namespace protocol {
     /** Properties of a TXInput. */
     interface ITXInput {
 
-        /** TXInput rawData */
-        rawData?: (protocol.TXInput.Iraw|null);
+        /** TXInput raw_data */
+        raw_data?: (protocol.TXInput.Iraw|null);
 
         /** TXInput signature */
         signature?: (Uint8Array|null);
@@ -6175,8 +6175,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ITXInput);
 
-        /** TXInput rawData. */
-        public rawData?: (protocol.TXInput.Iraw|null);
+        /** TXInput raw_data. */
+        public raw_data?: (protocol.TXInput.Iraw|null);
 
         /** TXInput signature. */
         public signature: Uint8Array;
@@ -6450,23 +6450,23 @@ export namespace protocol {
     /** Properties of a ResourceReceipt. */
     interface IResourceReceipt {
 
-        /** ResourceReceipt energyUsage */
-        energyUsage?: (number|Long|null);
+        /** ResourceReceipt energy_usage */
+        energy_usage?: (number|Long|null);
 
-        /** ResourceReceipt energyFee */
-        energyFee?: (number|Long|null);
+        /** ResourceReceipt energy_fee */
+        energy_fee?: (number|Long|null);
 
-        /** ResourceReceipt originEnergyUsage */
-        originEnergyUsage?: (number|Long|null);
+        /** ResourceReceipt origin_energy_usage */
+        origin_energy_usage?: (number|Long|null);
 
-        /** ResourceReceipt energyUsageTotal */
-        energyUsageTotal?: (number|Long|null);
+        /** ResourceReceipt energy_usage_total */
+        energy_usage_total?: (number|Long|null);
 
-        /** ResourceReceipt netUsage */
-        netUsage?: (number|Long|null);
+        /** ResourceReceipt net_usage */
+        net_usage?: (number|Long|null);
 
-        /** ResourceReceipt netFee */
-        netFee?: (number|Long|null);
+        /** ResourceReceipt net_fee */
+        net_fee?: (number|Long|null);
 
         /** ResourceReceipt result */
         result?: (protocol.Transaction.Result.contractResult|null);
@@ -6481,23 +6481,23 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IResourceReceipt);
 
-        /** ResourceReceipt energyUsage. */
-        public energyUsage: (number|Long);
+        /** ResourceReceipt energy_usage. */
+        public energy_usage: (number|Long);
 
-        /** ResourceReceipt energyFee. */
-        public energyFee: (number|Long);
+        /** ResourceReceipt energy_fee. */
+        public energy_fee: (number|Long);
 
-        /** ResourceReceipt originEnergyUsage. */
-        public originEnergyUsage: (number|Long);
+        /** ResourceReceipt origin_energy_usage. */
+        public origin_energy_usage: (number|Long);
 
-        /** ResourceReceipt energyUsageTotal. */
-        public energyUsageTotal: (number|Long);
+        /** ResourceReceipt energy_usage_total. */
+        public energy_usage_total: (number|Long);
 
-        /** ResourceReceipt netUsage. */
-        public netUsage: (number|Long);
+        /** ResourceReceipt net_usage. */
+        public net_usage: (number|Long);
 
-        /** ResourceReceipt netFee. */
-        public netFee: (number|Long);
+        /** ResourceReceipt net_fee. */
+        public net_fee: (number|Long);
 
         /** ResourceReceipt result. */
         public result: protocol.Transaction.Result.contractResult;
@@ -6576,8 +6576,8 @@ export namespace protocol {
     /** Properties of a Transaction. */
     interface ITransaction {
 
-        /** Transaction rawData */
-        rawData?: (protocol.Transaction.Iraw|null);
+        /** Transaction raw_data */
+        raw_data?: (protocol.Transaction.Iraw|null);
 
         /** Transaction signature */
         signature?: (Uint8Array[]|null);
@@ -6595,8 +6595,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ITransaction);
 
-        /** Transaction rawData. */
-        public rawData?: (protocol.Transaction.Iraw|null);
+        /** Transaction raw_data. */
+        public raw_data?: (protocol.Transaction.Iraw|null);
 
         /** Transaction signature. */
         public signature: Uint8Array[];
@@ -6692,8 +6692,8 @@ export namespace protocol {
             /** Contract ContractName */
             ContractName?: (Uint8Array|null);
 
-            /** Contract PermissionId */
-            PermissionId?: (number|null);
+            /** Contract Permission_id */
+            Permission_id?: (number|null);
         }
 
         /** Represents a Contract. */
@@ -6717,8 +6717,8 @@ export namespace protocol {
             /** Contract ContractName. */
             public ContractName: Uint8Array;
 
-            /** Contract PermissionId. */
-            public PermissionId: number;
+            /** Contract Permission_id. */
+            public Permission_id: number;
 
             /**
              * Creates a new Contract instance using the specified properties.
@@ -6844,23 +6844,23 @@ export namespace protocol {
             /** Result assetIssueID */
             assetIssueID?: (string|null);
 
-            /** Result withdrawAmount */
-            withdrawAmount?: (number|Long|null);
+            /** Result withdraw_amount */
+            withdraw_amount?: (number|Long|null);
 
-            /** Result unfreezeAmount */
-            unfreezeAmount?: (number|Long|null);
+            /** Result unfreeze_amount */
+            unfreeze_amount?: (number|Long|null);
 
-            /** Result exchangeReceivedAmount */
-            exchangeReceivedAmount?: (number|Long|null);
+            /** Result exchange_received_amount */
+            exchange_received_amount?: (number|Long|null);
 
-            /** Result exchangeInjectAnotherAmount */
-            exchangeInjectAnotherAmount?: (number|Long|null);
+            /** Result exchange_inject_another_amount */
+            exchange_inject_another_amount?: (number|Long|null);
 
-            /** Result exchangeWithdrawAnotherAmount */
-            exchangeWithdrawAnotherAmount?: (number|Long|null);
+            /** Result exchange_withdraw_another_amount */
+            exchange_withdraw_another_amount?: (number|Long|null);
 
-            /** Result exchangeId */
-            exchangeId?: (number|Long|null);
+            /** Result exchange_id */
+            exchange_id?: (number|Long|null);
         }
 
         /** Represents a Result. */
@@ -6884,23 +6884,23 @@ export namespace protocol {
             /** Result assetIssueID. */
             public assetIssueID: string;
 
-            /** Result withdrawAmount. */
-            public withdrawAmount: (number|Long);
+            /** Result withdraw_amount. */
+            public withdraw_amount: (number|Long);
 
-            /** Result unfreezeAmount. */
-            public unfreezeAmount: (number|Long);
+            /** Result unfreeze_amount. */
+            public unfreeze_amount: (number|Long);
 
-            /** Result exchangeReceivedAmount. */
-            public exchangeReceivedAmount: (number|Long);
+            /** Result exchange_received_amount. */
+            public exchange_received_amount: (number|Long);
 
-            /** Result exchangeInjectAnotherAmount. */
-            public exchangeInjectAnotherAmount: (number|Long);
+            /** Result exchange_inject_another_amount. */
+            public exchange_inject_another_amount: (number|Long);
 
-            /** Result exchangeWithdrawAnotherAmount. */
-            public exchangeWithdrawAnotherAmount: (number|Long);
+            /** Result exchange_withdraw_another_amount. */
+            public exchange_withdraw_another_amount: (number|Long);
 
-            /** Result exchangeId. */
-            public exchangeId: (number|Long);
+            /** Result exchange_id. */
+            public exchange_id: (number|Long);
 
             /**
              * Creates a new Result instance using the specified properties.
@@ -7004,14 +7004,14 @@ export namespace protocol {
         /** Properties of a raw. */
         interface Iraw {
 
-            /** raw refBlockBytes */
-            refBlockBytes?: (Uint8Array|null);
+            /** raw ref_block_bytes */
+            ref_block_bytes?: (Uint8Array|null);
 
-            /** raw refBlockNum */
-            refBlockNum?: (number|Long|null);
+            /** raw ref_block_num */
+            ref_block_num?: (number|Long|null);
 
-            /** raw refBlockHash */
-            refBlockHash?: (Uint8Array|null);
+            /** raw ref_block_hash */
+            ref_block_hash?: (Uint8Array|null);
 
             /** raw expiration */
             expiration?: (number|Long|null);
@@ -7031,8 +7031,8 @@ export namespace protocol {
             /** raw timestamp */
             timestamp?: (number|Long|null);
 
-            /** raw feeLimit */
-            feeLimit?: (number|Long|null);
+            /** raw fee_limit */
+            fee_limit?: (number|Long|null);
         }
 
         /** Represents a raw. */
@@ -7044,14 +7044,14 @@ export namespace protocol {
              */
             constructor(properties?: protocol.Transaction.Iraw);
 
-            /** raw refBlockBytes. */
-            public refBlockBytes: Uint8Array;
+            /** raw ref_block_bytes. */
+            public ref_block_bytes: Uint8Array;
 
-            /** raw refBlockNum. */
-            public refBlockNum: (number|Long);
+            /** raw ref_block_num. */
+            public ref_block_num: (number|Long);
 
-            /** raw refBlockHash. */
-            public refBlockHash: Uint8Array;
+            /** raw ref_block_hash. */
+            public ref_block_hash: Uint8Array;
 
             /** raw expiration. */
             public expiration: (number|Long);
@@ -7071,8 +7071,8 @@ export namespace protocol {
             /** raw timestamp. */
             public timestamp: (number|Long);
 
-            /** raw feeLimit. */
-            public feeLimit: (number|Long);
+            /** raw fee_limit. */
+            public fee_limit: (number|Long);
 
             /**
              * Creates a new raw instance using the specified properties.
@@ -7164,8 +7164,8 @@ export namespace protocol {
         /** TransactionInfo contractResult */
         contractResult?: (Uint8Array[]|null);
 
-        /** TransactionInfo contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** TransactionInfo contract_address */
+        contract_address?: (Uint8Array|null);
 
         /** TransactionInfo receipt */
         receipt?: (protocol.IResourceReceipt|null);
@@ -7182,26 +7182,26 @@ export namespace protocol {
         /** TransactionInfo assetIssueID */
         assetIssueID?: (string|null);
 
-        /** TransactionInfo withdrawAmount */
-        withdrawAmount?: (number|Long|null);
+        /** TransactionInfo withdraw_amount */
+        withdraw_amount?: (number|Long|null);
 
-        /** TransactionInfo unfreezeAmount */
-        unfreezeAmount?: (number|Long|null);
+        /** TransactionInfo unfreeze_amount */
+        unfreeze_amount?: (number|Long|null);
 
-        /** TransactionInfo internalTransactions */
-        internalTransactions?: (protocol.IInternalTransaction[]|null);
+        /** TransactionInfo internal_transactions */
+        internal_transactions?: (protocol.IInternalTransaction[]|null);
 
-        /** TransactionInfo exchangeReceivedAmount */
-        exchangeReceivedAmount?: (number|Long|null);
+        /** TransactionInfo exchange_received_amount */
+        exchange_received_amount?: (number|Long|null);
 
-        /** TransactionInfo exchangeInjectAnotherAmount */
-        exchangeInjectAnotherAmount?: (number|Long|null);
+        /** TransactionInfo exchange_inject_another_amount */
+        exchange_inject_another_amount?: (number|Long|null);
 
-        /** TransactionInfo exchangeWithdrawAnotherAmount */
-        exchangeWithdrawAnotherAmount?: (number|Long|null);
+        /** TransactionInfo exchange_withdraw_another_amount */
+        exchange_withdraw_another_amount?: (number|Long|null);
 
-        /** TransactionInfo exchangeId */
-        exchangeId?: (number|Long|null);
+        /** TransactionInfo exchange_id */
+        exchange_id?: (number|Long|null);
     }
 
     /** Represents a TransactionInfo. */
@@ -7228,8 +7228,8 @@ export namespace protocol {
         /** TransactionInfo contractResult. */
         public contractResult: Uint8Array[];
 
-        /** TransactionInfo contractAddress. */
-        public contractAddress: Uint8Array;
+        /** TransactionInfo contract_address. */
+        public contract_address: Uint8Array;
 
         /** TransactionInfo receipt. */
         public receipt?: (protocol.IResourceReceipt|null);
@@ -7246,26 +7246,26 @@ export namespace protocol {
         /** TransactionInfo assetIssueID. */
         public assetIssueID: string;
 
-        /** TransactionInfo withdrawAmount. */
-        public withdrawAmount: (number|Long);
+        /** TransactionInfo withdraw_amount. */
+        public withdraw_amount: (number|Long);
 
-        /** TransactionInfo unfreezeAmount. */
-        public unfreezeAmount: (number|Long);
+        /** TransactionInfo unfreeze_amount. */
+        public unfreeze_amount: (number|Long);
 
-        /** TransactionInfo internalTransactions. */
-        public internalTransactions: protocol.IInternalTransaction[];
+        /** TransactionInfo internal_transactions. */
+        public internal_transactions: protocol.IInternalTransaction[];
 
-        /** TransactionInfo exchangeReceivedAmount. */
-        public exchangeReceivedAmount: (number|Long);
+        /** TransactionInfo exchange_received_amount. */
+        public exchange_received_amount: (number|Long);
 
-        /** TransactionInfo exchangeInjectAnotherAmount. */
-        public exchangeInjectAnotherAmount: (number|Long);
+        /** TransactionInfo exchange_inject_another_amount. */
+        public exchange_inject_another_amount: (number|Long);
 
-        /** TransactionInfo exchangeWithdrawAnotherAmount. */
-        public exchangeWithdrawAnotherAmount: (number|Long);
+        /** TransactionInfo exchange_withdraw_another_amount. */
+        public exchange_withdraw_another_amount: (number|Long);
 
-        /** TransactionInfo exchangeId. */
-        public exchangeId: (number|Long);
+        /** TransactionInfo exchange_id. */
+        public exchange_id: (number|Long);
 
         /**
          * Creates a new TransactionInfo instance using the specified properties.
@@ -7740,11 +7740,11 @@ export namespace protocol {
     /** Properties of a BlockHeader. */
     interface IBlockHeader {
 
-        /** BlockHeader rawData */
-        rawData?: (protocol.BlockHeader.Iraw|null);
+        /** BlockHeader raw_data */
+        raw_data?: (protocol.BlockHeader.Iraw|null);
 
-        /** BlockHeader witnessSignature */
-        witnessSignature?: (Uint8Array|null);
+        /** BlockHeader witness_signature */
+        witness_signature?: (Uint8Array|null);
     }
 
     /** Represents a BlockHeader. */
@@ -7756,11 +7756,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IBlockHeader);
 
-        /** BlockHeader rawData. */
-        public rawData?: (protocol.BlockHeader.Iraw|null);
+        /** BlockHeader raw_data. */
+        public raw_data?: (protocol.BlockHeader.Iraw|null);
 
-        /** BlockHeader witnessSignature. */
-        public witnessSignature: Uint8Array;
+        /** BlockHeader witness_signature. */
+        public witness_signature: Uint8Array;
 
         /**
          * Creates a new BlockHeader instance using the specified properties.
@@ -7850,11 +7850,11 @@ export namespace protocol {
             /** raw number */
             number?: (number|Long|null);
 
-            /** raw witnessId */
-            witnessId?: (number|Long|null);
+            /** raw witness_id */
+            witness_id?: (number|Long|null);
 
-            /** raw witnessAddress */
-            witnessAddress?: (Uint8Array|null);
+            /** raw witness_address */
+            witness_address?: (Uint8Array|null);
 
             /** raw version */
             version?: (number|null);
@@ -7884,11 +7884,11 @@ export namespace protocol {
             /** raw number. */
             public number: (number|Long);
 
-            /** raw witnessId. */
-            public witnessId: (number|Long);
+            /** raw witness_id. */
+            public witness_id: (number|Long);
 
-            /** raw witnessAddress. */
-            public witnessAddress: Uint8Array;
+            /** raw witness_address. */
+            public witness_address: Uint8Array;
 
             /** raw version. */
             public version: number;
@@ -7974,8 +7974,8 @@ export namespace protocol {
         /** Block transactions */
         transactions?: (protocol.ITransaction[]|null);
 
-        /** Block blockHeader */
-        blockHeader?: (protocol.IBlockHeader|null);
+        /** Block block_header */
+        block_header?: (protocol.IBlockHeader|null);
     }
 
     /** Represents a Block. */
@@ -7990,8 +7990,8 @@ export namespace protocol {
         /** Block transactions. */
         public transactions: protocol.ITransaction[];
 
-        /** Block blockHeader. */
-        public blockHeader?: (protocol.IBlockHeader|null);
+        /** Block block_header. */
+        public block_header?: (protocol.IBlockHeader|null);
 
         /**
          * Creates a new Block instance using the specified properties.
@@ -8070,8 +8070,8 @@ export namespace protocol {
         /** ChainInventory ids */
         ids?: (protocol.ChainInventory.IBlockId[]|null);
 
-        /** ChainInventory remainNum */
-        remainNum?: (number|Long|null);
+        /** ChainInventory remain_num */
+        remain_num?: (number|Long|null);
     }
 
     /** Represents a ChainInventory. */
@@ -8086,8 +8086,8 @@ export namespace protocol {
         /** ChainInventory ids. */
         public ids: protocol.ChainInventory.IBlockId[];
 
-        /** ChainInventory remainNum. */
-        public remainNum: (number|Long);
+        /** ChainInventory remain_num. */
+        public remain_num: (number|Long);
 
         /**
          * Creates a new ChainInventory instance using the specified properties.
@@ -8575,8 +8575,8 @@ export namespace protocol {
         /** Items blocks */
         blocks?: (protocol.IBlock[]|null);
 
-        /** Items blockHeaders */
-        blockHeaders?: (protocol.IBlockHeader[]|null);
+        /** Items block_headers */
+        block_headers?: (protocol.IBlockHeader[]|null);
 
         /** Items transactions */
         transactions?: (protocol.ITransaction[]|null);
@@ -8597,8 +8597,8 @@ export namespace protocol {
         /** Items blocks. */
         public blocks: protocol.IBlock[];
 
-        /** Items blockHeaders. */
-        public blockHeaders: protocol.IBlockHeader[];
+        /** Items block_headers. */
+        public block_headers: protocol.IBlockHeader[];
 
         /** Items transactions. */
         public transactions: protocol.ITransaction[];
@@ -8688,8 +8688,8 @@ export namespace protocol {
     /** Properties of a DynamicProperties. */
     interface IDynamicProperties {
 
-        /** DynamicProperties lastSolidityBlockNum */
-        lastSolidityBlockNum?: (number|Long|null);
+        /** DynamicProperties last_solidity_block_num */
+        last_solidity_block_num?: (number|Long|null);
     }
 
     /** Represents a DynamicProperties. */
@@ -8701,8 +8701,8 @@ export namespace protocol {
          */
         constructor(properties?: protocol.IDynamicProperties);
 
-        /** DynamicProperties lastSolidityBlockNum. */
-        public lastSolidityBlockNum: (number|Long);
+        /** DynamicProperties last_solidity_block_num. */
+        public last_solidity_block_num: (number|Long);
 
         /**
          * Creates a new DynamicProperties instance using the specified properties.
@@ -9115,11 +9115,11 @@ export namespace protocol {
     /** Properties of a SmartContract. */
     interface ISmartContract {
 
-        /** SmartContract originAddress */
-        originAddress?: (Uint8Array|null);
+        /** SmartContract origin_address */
+        origin_address?: (Uint8Array|null);
 
-        /** SmartContract contractAddress */
-        contractAddress?: (Uint8Array|null);
+        /** SmartContract contract_address */
+        contract_address?: (Uint8Array|null);
 
         /** SmartContract abi */
         abi?: (protocol.SmartContract.IABI|null);
@@ -9127,23 +9127,23 @@ export namespace protocol {
         /** SmartContract bytecode */
         bytecode?: (Uint8Array|null);
 
-        /** SmartContract callValue */
-        callValue?: (number|Long|null);
+        /** SmartContract call_value */
+        call_value?: (number|Long|null);
 
-        /** SmartContract consumeUserResourcePercent */
-        consumeUserResourcePercent?: (number|Long|null);
+        /** SmartContract consume_user_resource_percent */
+        consume_user_resource_percent?: (number|Long|null);
 
         /** SmartContract name */
         name?: (string|null);
 
-        /** SmartContract originEnergyLimit */
-        originEnergyLimit?: (number|Long|null);
+        /** SmartContract origin_energy_limit */
+        origin_energy_limit?: (number|Long|null);
 
-        /** SmartContract codeHash */
-        codeHash?: (Uint8Array|null);
+        /** SmartContract code_hash */
+        code_hash?: (Uint8Array|null);
 
-        /** SmartContract trxHash */
-        trxHash?: (Uint8Array|null);
+        /** SmartContract trx_hash */
+        trx_hash?: (Uint8Array|null);
     }
 
     /** Represents a SmartContract. */
@@ -9155,11 +9155,11 @@ export namespace protocol {
          */
         constructor(properties?: protocol.ISmartContract);
 
-        /** SmartContract originAddress. */
-        public originAddress: Uint8Array;
+        /** SmartContract origin_address. */
+        public origin_address: Uint8Array;
 
-        /** SmartContract contractAddress. */
-        public contractAddress: Uint8Array;
+        /** SmartContract contract_address. */
+        public contract_address: Uint8Array;
 
         /** SmartContract abi. */
         public abi?: (protocol.SmartContract.IABI|null);
@@ -9167,23 +9167,23 @@ export namespace protocol {
         /** SmartContract bytecode. */
         public bytecode: Uint8Array;
 
-        /** SmartContract callValue. */
-        public callValue: (number|Long);
+        /** SmartContract call_value. */
+        public call_value: (number|Long);
 
-        /** SmartContract consumeUserResourcePercent. */
-        public consumeUserResourcePercent: (number|Long);
+        /** SmartContract consume_user_resource_percent. */
+        public consume_user_resource_percent: (number|Long);
 
         /** SmartContract name. */
         public name: string;
 
-        /** SmartContract originEnergyLimit. */
-        public originEnergyLimit: (number|Long);
+        /** SmartContract origin_energy_limit. */
+        public origin_energy_limit: (number|Long);
 
-        /** SmartContract codeHash. */
-        public codeHash: Uint8Array;
+        /** SmartContract code_hash. */
+        public code_hash: Uint8Array;
 
-        /** SmartContract trxHash. */
-        public trxHash: Uint8Array;
+        /** SmartContract trx_hash. */
+        public trx_hash: Uint8Array;
 
         /**
          * Creates a new SmartContract instance using the specified properties.
@@ -9613,11 +9613,11 @@ export namespace protocol {
         /** InternalTransaction hash */
         hash?: (Uint8Array|null);
 
-        /** InternalTransaction callerAddress */
-        callerAddress?: (Uint8Array|null);
+        /** InternalTransaction caller_address */
+        caller_address?: (Uint8Array|null);
 
-        /** InternalTransaction transferToAddress */
-        transferToAddress?: (Uint8Array|null);
+        /** InternalTransaction transferTo_address */
+        transferTo_address?: (Uint8Array|null);
 
         /** InternalTransaction callValueInfo */
         callValueInfo?: (protocol.InternalTransaction.ICallValueInfo[]|null);
@@ -9641,11 +9641,11 @@ export namespace protocol {
         /** InternalTransaction hash. */
         public hash: Uint8Array;
 
-        /** InternalTransaction callerAddress. */
-        public callerAddress: Uint8Array;
+        /** InternalTransaction caller_address. */
+        public caller_address: Uint8Array;
 
-        /** InternalTransaction transferToAddress. */
-        public transferToAddress: Uint8Array;
+        /** InternalTransaction transferTo_address. */
+        public transferTo_address: Uint8Array;
 
         /** InternalTransaction callValueInfo. */
         public callValueInfo: protocol.InternalTransaction.ICallValueInfo[];

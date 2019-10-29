@@ -1,5 +1,9 @@
 import { BaseSignature } from "../baseCoin/iface";
 
 export class Signature implements BaseSignature {
-  signature: string;
+  /**
+   * Constructor
+   * @param signature hex-encoded
+   */
+  constructor(public signature: string) { }
 }

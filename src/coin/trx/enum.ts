@@ -5,11 +5,16 @@ export enum ContractType {
   /**
    * This is a transfer of TRX contract.
    */
-  Transfer,
+  Transfer = 'TransferContract',
   /**
    * This is the multi-sig initialization contract.
    */
-  AccountPermissionUpdate, 
+  AccountPermissionUpdate = 'AccountPermissionUpdateContract', 
+}
+
+export enum ContractTypeUrl {
+  TransferContract = 'type.googleapis.com/protocol.TransferContract',
+  AccountPermissionUpdate = 'type.googleapis.com/protocol.AccountPermissionUpdateContract',
 }
 
 export enum PermissionType {

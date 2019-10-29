@@ -20,7 +20,7 @@ export interface BaseCoin {
    * Validates the value corresponding to an amount can be used for this transaction. Throws an
    * exception if invalid.
    */
-  validateValue(value: BigNumber);
+  validateValue(value: BigNumber): void;
 
   /***
    * Validates a private key.

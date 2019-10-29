@@ -1,34 +1,36 @@
 import * as should from 'should';
 import { TransactionBuilder } from '../../../../src';
 import { TransactionType } from '../../../../src/coin/baseCoin/';
-import { UnsignedBuildTransaction,
+import {
+  UnsignedBuildTransaction,
   FirstSigOnBuildTransaction,
   FirstPrivateKey,
   SecondSigOnBuildTransaction,
-  SecondPrivateKey,
+  SecondPrivateKey, FirstExpectedSig, SecondExpectedSig,
 } from '../../../resources/trx';
+import {TronTransaction} from "../../../../src/coin/trx/iface";
 
-describe('Tron test network', function() {
+describe('Tron test network', () => {
   let txBuilder: TransactionBuilder;
 
   beforeEach(() => {
     txBuilder = new TransactionBuilder({ coinName: 'ttrx '});
   });
 
-  describe('Transaction build', () => {
-    it('should use from with a transfer contract for an unsigned tx', () => {
-      const txJson = JSON.stringify(UnsignedBuildTransaction);
-      txBuilder.from(txJson);
-    });
+  describe('Transaction from', () => {
+    // test both code paths - the json'd string and transaction item
+    [(rawItem) => JSON.stringify(rawItem), (rawItem) => rawItem].map((transformFn) => {
+      it('should use from with a transfer contract for an unsigned tx', () => {
+        txBuilder.from(transformFn(UnsignedBuildTransaction));
+      });
 
-    it('should use from with a transfer contract for a half-signed tx', () => {
-      const txJson = JSON.stringify(FirstSigOnBuildTransaction);
-      txBuilder.from(txJson);
-    });
+      it('should use from with a transfer contract for a half-signed tx', () => {
+        txBuilder.from(transformFn(FirstSigOnBuildTransaction));
+      });
 
-    it('should use from with a transfer contract for a fully signed tx', () => {
-      const txJson = JSON.stringify(SecondSigOnBuildTransaction);
-      txBuilder.from(txJson);
+      it('should use from with a transfer contract for a fully signed tx', () => {
+        txBuilder.from(transformFn(SecondSigOnBuildTransaction));
+      });
     });
   });
 
@@ -43,7 +45,7 @@ describe('Tron test network', function() {
       txBuilder.sign({ key: FirstPrivateKey });
     });
 
-    it('should sign an unsigned tx', () => {
+    it('should sign a signed tx with another key', () => {
       const txJson = JSON.stringify(FirstSigOnBuildTransaction);
       txBuilder.from(txJson);
       txBuilder.sign({ key: SecondPrivateKey });
@@ -66,38 +68,43 @@ describe('Tron test network', function() {
       txBuilder = new TransactionBuilder({ coinName: 'ttrx '});
     });
 
-    it('should build an half signed tx', () => {
-      const txJson = JSON.stringify(UnsignedBuildTransaction);
-      txBuilder.from(txJson);
-      txBuilder.sign({ key: FirstPrivateKey });
-      const tx = txBuilder.build();
+    // test both code paths - the json'd string and transaction item
+    [(rawItem) => JSON.stringify(rawItem), (rawItem) => rawItem].map((transformFn) => {
+      it('should build an half signed tx', () => {
+        txBuilder.from(transformFn(UnsignedBuildTransaction));
+        txBuilder.sign({ key: FirstPrivateKey });
 
-      tx.id.should.equal('80b8b9eaed51c8bba3b49f7f0e7cc5f21ac99a6f3e2893c663b544bf2c695b1d');
-      tx.type.should.equal(TransactionType.Send);
-      tx.senders.length.should.equal(1);
-      tx.senders[0].address.should.equal('TTsGwnTLQ4eryFJpDvJSfuGQxPXRCjXvZz');
-      tx.destinations.length.should.equal(1);
-      tx.destinations[0].address.should.equal('TNYssiPgaf9XYz3urBUqr861Tfqxvko47B');
-      tx.destinations[0].value.toString().should.equal('1718');
-    });
+        const tx = txBuilder.build();
 
-    it('should sign a fully signed tx', () => {
-      txBuilder.from(FirstSigOnBuildTransaction);
-      txBuilder.sign({ key: SecondPrivateKey});
-      const tx = txBuilder.build();
+        tx.toJson().signature[0].should.equal(FirstExpectedSig);
 
-      tx.toJson().signature[0].should.equal('bd08e6cd876bb573dd00a32870b58b70ea8b7908f5131686502589941bfa4fdda76b8c81bbbcfc549be6d4988657cea122df7da46c72041def2683d6ecb04a7401');
-      tx.toJson().signature[1].should.equal('f3cabe2f4aed13e2342c78c7bf4626ea36cd6509a44418c24866814d3426703686be9ef21bd993324c520565beee820201f2a50a9ac971732410d3eb69cdb2a600');
+        tx.id.should.equal(UnsignedBuildTransaction.txID);
+        tx.type.should.equal(TransactionType.Send);
+        tx.senders.length.should.equal(1);
+        tx.senders[0].address.should.equal('TTsGwnTLQ4eryFJpDvJSfuGQxPXRCjXvZz');
+        tx.destinations.length.should.equal(1);
+        tx.destinations[0].address.should.equal('TNYssiPgaf9XYz3urBUqr861Tfqxvko47B');
+        tx.destinations[0].value.toString().should.equal('1718');
+      });
 
-      tx.id.should.equal('80b8b9eaed51c8bba3b49f7f0e7cc5f21ac99a6f3e2893c663b544bf2c695b1d');
-      tx.type.should.equal(TransactionType.Send);
-      tx.senders.length.should.equal(1);
-      tx.senders[0].address.should.equal('TTsGwnTLQ4eryFJpDvJSfuGQxPXRCjXvZz');
-      tx.destinations.length.should.equal(1);
-      tx.destinations[0].address.should.equal('TNYssiPgaf9XYz3urBUqr861Tfqxvko47B');
-      tx.destinations[0].value.toString().should.equal('1718');
-      tx.validFrom.should.equal(1571811410819);
-      tx.validTo.should.equal(1571811468000);
+      it('should build a fully signed tx', () => {
+        txBuilder.from(transformFn(FirstSigOnBuildTransaction));
+        txBuilder.sign({ key: SecondPrivateKey});
+        const tx = txBuilder.build();
+
+        tx.toJson().signature[0].should.equal(FirstExpectedSig);
+        tx.toJson().signature[1].should.equal(SecondExpectedSig);
+
+        tx.id.should.equal(UnsignedBuildTransaction.txID);
+        tx.type.should.equal(TransactionType.Send);
+        tx.senders.length.should.equal(1);
+        tx.senders[0].address.should.equal('TTsGwnTLQ4eryFJpDvJSfuGQxPXRCjXvZz');
+        tx.destinations.length.should.equal(1);
+        tx.destinations[0].address.should.equal('TNYssiPgaf9XYz3urBUqr861Tfqxvko47B');
+        tx.destinations[0].value.toString().should.equal('1718');
+        tx.validFrom.should.equal(1571811410819);
+        tx.validTo.should.equal(1571811468000);
+      });
     });
   });
 });
