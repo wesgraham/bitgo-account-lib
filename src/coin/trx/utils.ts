@@ -3,7 +3,7 @@ const tronweb = require('tronweb');
 import { protocol } from '../../../resources/trx/protobuf/tron';
 
 import * as assert from 'assert';
-import { Account, TronTransaction, SignTransaction } from './iface';
+import { Account, SignTransaction } from './iface';
 import { ContractType, PermissionType } from './enum';
 import { UtilsError, ParseTransactionError } from '../baseCoin/errors';
 import Long = require('long');
@@ -98,24 +98,6 @@ export function signString(message: string, privateKey: string | ByteArray, useT
 
 export function getRawAddressFromPubKey(pubBytes: ByteArray | string): ByteArray {
   return tronweb.utils.crypto.computeAddress(pubBytes);
-}
-
-/**
- * Decodes a JSON encoded transaction.
- * @param raw raw_data_hex field from tron transactions. this should also have a txID
- */
-export function decodeTransaction(raw: any): TronTransaction {
-  const rawTx = convertFromRawTransaction(raw);
-
-  if (typeof rawTx.raw_data_hex !== 'string') {
-    throw new ParseTransactionError('Failed to find raw data hex.');
-  }
-
-  const decodedRaw = protocol.Transaction.raw.decode(Buffer.from(rawTx.raw_data_hex, 'hex'));
-  const decodedTx = new protocol.Transaction({ raw_data: decodedRaw, signature: raw.signature });
-
-  // this doesn't come with a txID, so we have to attach it on the side
-  return new TronTransaction(decodedTx, raw.txID);
 }
 
 /**

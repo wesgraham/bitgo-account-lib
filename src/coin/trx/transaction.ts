@@ -1,7 +1,6 @@
-import {TronTransaction} from "./iface";
 import {BaseCoin as CoinConfig} from "@bitgo/statics";
 import {BaseTransaction} from "../../transaction";
-import {decodeTransaction, getBase58AddressFromBinary} from "./utils";
+import {convertFromRawTransaction, getBase58AddressFromBinary} from "./utils";
 import BigNumber from "bignumber.js";
 import {ParseTransactionError} from "../baseCoin/errors";
 import {TransactionType} from "../baseCoin/enum";
@@ -27,7 +26,7 @@ export class Transaction extends BaseTransaction {
       }
 
       // decode our transaction and set a txID;
-      const decodedTx = decodeTransaction(parsedTx);
+      const decodedTx = this.decodeTransaction(parsedTx);
       this._transaction = decodedTx;
 
       // decode our raw data and record the fields
@@ -109,6 +108,24 @@ export class Transaction extends BaseTransaction {
   }
 
   /**
+   * Decodes a JSON encoded transaction.
+   * @param raw raw_data_hex field from tron transactions. this should also have a txID
+   */
+  decodeTransaction(raw: any): TronTransaction {
+    const rawTx = convertFromRawTransaction(raw);
+
+    if (typeof rawTx.raw_data_hex !== 'string') {
+      throw new ParseTransactionError('Failed to find raw data hex.');
+    }
+
+    const decodedRaw = protocol.Transaction.raw.decode(Buffer.from(rawTx.raw_data_hex, 'hex'));
+    const decodedTx = new protocol.Transaction({ raw_data: decodedRaw, signature: raw.signature });
+
+    // this doesn't come with a txID, so we have to attach it on the side
+    return new TronTransaction(decodedTx, raw.txID);
+  }
+
+  /**
    * Tron transaction do not contain the owners account address so it is not possible to check the
    * private key with any but the account main address. This is not enough to fail this check, so it
    * is a no-op.
@@ -127,4 +144,13 @@ export class Transaction extends BaseTransaction {
 
     return baseObj;
   }
+}
+
+export class TronTransaction extends protocol.Transaction {
+  constructor(tx: protocol.Transaction, txID: string) {
+    super(tx);
+    this.txID = txID;
+  }
+
+  txID: string;
 }

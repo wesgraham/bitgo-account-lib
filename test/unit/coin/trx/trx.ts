@@ -8,7 +8,6 @@ import {
   SecondSigOnBuildTransaction,
   SecondPrivateKey, FirstExpectedSig, SecondExpectedSig,
 } from '../../../resources/trx';
-import {TronTransaction} from "../../../../src/coin/trx/iface";
 
 describe('Tron test network', () => {
   let txBuilder: TransactionBuilder;

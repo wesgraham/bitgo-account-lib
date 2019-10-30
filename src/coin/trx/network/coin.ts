@@ -1,6 +1,6 @@
 import { BaseCoin } from "../../baseCoin";
 import BigNumber from 'bignumber.js';
-import { Transaction } from '../transaction';
+import {Transaction, TronTransaction} from '../transaction';
 // import { RawData, TransactionReceipt } from '../iface';
 import { Key } from '../key';
 import { ParseTransactionError, SigningError, BuildTransactionError } from '../../baseCoin/errors';
@@ -9,7 +9,7 @@ import { BaseKey } from '../../baseCoin/iface';
 import { decodeRawTransaction, isValidHex, signTransaction, isBase58Address } from "../utils";
 import { BaseCoin as CoinConfig } from "@bitgo/statics";
 import { protocol } from "../../../../resources/trx/protobuf/tron";
-import { TronTransaction, SignTransaction } from "../iface";
+import { SignTransaction } from "../iface";
 
 export class TrxBase implements BaseCoin {
   protected constructor(private _coinConfig: Readonly<CoinConfig>) { }
